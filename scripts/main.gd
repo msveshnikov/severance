@@ -72,8 +72,7 @@ func _build_world() -> void:
 	add_child(world)
 	env = WorldEnvironment.new()
 	var e := Environment.new()
-	e.background_mode = Environment.BG_COLOR
-	e.background_color = UiKit.C_BG
+	e.background_mode = Environment.BG_CLEAR_COLOR
 	e.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
 	e.ambient_light_color = Color(0.78, 0.84, 0.86)
 	e.ambient_light_energy = 0.62
