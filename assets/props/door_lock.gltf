@@ -51,7 +51,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"name":"black",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -65,7 +64,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"door_panel",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[

@@ -26,7 +26,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"name":"crate_blue",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -40,7 +39,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"milk",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -54,7 +52,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"rubber",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[

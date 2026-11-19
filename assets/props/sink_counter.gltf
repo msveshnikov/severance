@@ -26,7 +26,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"name":"counter_grey",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -40,7 +39,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"plastic_white",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -54,7 +52,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"steel",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -68,7 +65,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"mirror",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[

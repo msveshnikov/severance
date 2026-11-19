@@ -37,7 +37,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"name":"art_art_petey_map",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{

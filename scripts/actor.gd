@@ -6,7 +6,7 @@ class_name Actor
 signal arrived
 
 const BLOB := preload("res://assets/ui/blob.png")
-const SPEEDS := {"walk": 0.993, "run": 2.274, "sneak": 0.696}   # assets/characters/anim_speeds.json
+const SPEEDS := {"walk": 1.362, "run": 3.165, "sneak": 0.955}   # assets/characters/anim_speeds.json
 
 var id := ""
 var level: Level
@@ -55,7 +55,7 @@ func setup(char_id: String, lvl: Level) -> void:
 	sm.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
 	sm.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
 	sh.material_override = sm
-	sh.position.y = 0.012
+	sh.position.y = 0.035
 	sh.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 	add_child(sh)
 	# selection ring (active innie)
@@ -75,7 +75,7 @@ func setup(char_id: String, lvl: Level) -> void:
 	rm.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
 	ring.material_override = rm
 	ring.scale = Vector3(1, 0.05, 1)
-	ring.position.y = 0.03
+	ring.position.y = 0.045
 	ring.visible = false
 	ring.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 	add_child(ring)
@@ -130,7 +130,7 @@ func walk_to(target: Vector3, run: bool = true) -> void:
 		stand_up()
 	path = level.find_path(global_position, target)
 	move_anim = "run" if run else "walk"
-	speed = 3.4 if run else 1.5
+	speed = 3.6 if run else 1.7
 	if Game.flag("sneaking") and is_innie:
 		move_anim = "sneak"
 		speed = 1.6
@@ -162,11 +162,15 @@ func sit(pos: Vector3, yaw: float, a: String = "sit") -> void:
 	seated = true
 	path = PackedVector3Array()
 	var back := Vector3(sin(yaw), 0, cos(yaw)) * -0.08
+	# step in front of the chair, turn round, then lower onto the seat
+	var front := pos + Vector3(sin(yaw), 0, cos(yaw)) * 0.55
 	var tw := create_tween()
-	tw.tween_property(self, "global_position", pos + back + Vector3(0, 0.1, 0), 0.25)
-	rotation.y = yaw
-	yaw_target = yaw
-	play(a, 0.25)
+	tw.tween_property(self, "global_position", Vector3(front.x, 0, front.z), 0.25)
+	tw.tween_callback(func():
+		rotation.y = yaw
+		yaw_target = yaw
+		play(a, 0.35))
+	tw.tween_property(self, "global_position", pos + back + Vector3(0, 0.05, 0), 0.4).set_trans(Tween.TRANS_SINE)
 
 
 func stand_up() -> void:
@@ -212,7 +216,7 @@ func push(dir: Vector3, delta: float) -> void:
 	if seated:
 		stand_up()
 	path = PackedVector3Array()
-	var sp := 3.4
+	var sp := 3.6
 	var a := "run"
 	if Game.flag("sneaking"):
 		sp = 1.6

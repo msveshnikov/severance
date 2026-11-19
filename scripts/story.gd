@@ -370,6 +370,7 @@ func on_use(id: String) -> void:
 			return
 		if it.get("seat", "") != "" and it.has("seat_pos"):
 			p.sit(it["seat_pos"], it["seat_yaw"], "sit_type" if id.begins_with("term_") else "sit")
+			await main.get_tree().create_timer(1.1).timeout
 		var dl: String = s.get("dlg", "")
 		if dl != "":
 			await main.dialog(dl, {"code": Game.code, "q": int(Game.quota)})
@@ -396,6 +397,7 @@ func on_use(id: String) -> void:
 	if id.begins_with("term_") and id == "term_" + Game.active:
 		if it.has("seat_pos"):
 			p.sit(it["seat_pos"], it["seat_yaw"], "sit_type")
+			await main.get_tree().create_timer(1.1).timeout
 		var file := randi() % Quests.FILES.size()
 		await main.minigame("mdr", {"file": file, "free": true})
 		return

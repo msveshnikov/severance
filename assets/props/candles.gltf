@@ -29,7 +29,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"name":"brass",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -43,7 +42,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"wax",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -57,7 +55,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"emissiveFactor":[
 				1,
 				0.1946178376674652,

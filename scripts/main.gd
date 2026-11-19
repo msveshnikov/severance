@@ -59,6 +59,9 @@ func _ready() -> void:
 	if Game.args.has("tour"):
 		await _tour()
 		return
+	if Game.args.has("walltest"):
+		await _walltest()
+		return
 	await load_level(Game.level if Game.has_save() else "severed")
 	show_title()
 	if Game.autotest:
@@ -976,6 +979,9 @@ func _process(delta: float) -> void:
 
 # ------------------------------------------------------------------ autotest / tour
 func _shot(name: String) -> void:
+	if DisplayServer.get_name() == "headless":
+		_log("shot %s (headless, skipped)" % name)
+		return
 	await RenderingServer.frame_post_draw
 	var img := get_viewport().get_texture().get_image()
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path("res://renders/game"))
@@ -1176,4 +1182,58 @@ func _tour() -> void:
 		await _wait(1.2)
 		await _shot("tour_%02d" % k)
 		k += 1
+	get_tree().quit()
+
+
+func _walltest() -> void:
+	## --walltest: random paths and WASD pushes must never leave walkable cells
+	for lname in ["severed", "testing"]:
+		var lv := Level.new()
+		world.add_child(lv)
+		lv.build(lname)
+		var cells := []
+		for j in lv.gh:
+			for i in lv.gw:
+				if lv.walkable(Vector2i(i, j)):
+					cells.append(Vector2i(i, j))
+		var rng := RandomNumberGenerator.new()
+		rng.seed = 5
+		var bad_path := 0
+		var bad_pts := []
+		for k in 600:
+			var a: Vector2i = cells[rng.randi() % cells.size()]
+			var b: Vector2i = cells[rng.randi() % cells.size()]
+			var from := lv.cell_center(a) + Vector3(rng.randf_range(-0.2, 0.2), 0, rng.randf_range(-0.2, 0.2))
+			var to := lv.cell_center(b)
+			var path := lv.find_path(from, to)
+			var cur := from
+			for p in path:
+				var n := int(ceil(cur.distance_to(p) / 0.05)) + 1
+				for s in n + 1:
+					var q := cur.lerp(p, float(s) / n)
+					if not lv.walkable_pos(q):
+						bad_path += 1
+						if bad_pts.size() < 8:
+							bad_pts.append([lv.cell_of(q), lname, str(from), str(p)])
+						break
+				cur = p
+		# WASD: an actor pushed in 8 directions from random cells must stay on walkable ground
+		var act := Actor.new()
+		world.add_child(act)
+		act.setup("mark", lv)
+		var bad_push := 0
+		for k in 400:
+			var c: Vector2i = cells[rng.randi() % cells.size()]
+			act.global_position = lv.cell_center(c)
+			var ang := rng.randf() * TAU
+			var d := Vector3(cos(ang), 0, sin(ang))
+			for f in 90:
+				act.push(d, 1.0 / 30.0)
+				if not lv.walkable_pos(act.global_position):
+					bad_push += 1
+					break
+		print("WALLTEST %s paths_bad=%d push_bad=%d %s" % [lname, bad_path, bad_push, str(bad_pts)])
+		act.queue_free()
+		lv.queue_free()
+		await get_tree().process_frame
 	get_tree().quit()

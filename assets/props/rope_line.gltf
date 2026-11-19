@@ -31,7 +31,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"name":"brass",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -45,7 +44,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"velvet",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[

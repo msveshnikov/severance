@@ -32,7 +32,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"name":"clock_face",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -46,7 +45,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"frame_dark",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -60,7 +58,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"black",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[

@@ -31,7 +31,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"name":"wood",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{

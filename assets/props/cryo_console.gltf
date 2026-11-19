@@ -39,7 +39,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"name":"sec_desk",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -53,7 +52,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"black",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -67,7 +65,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"emissiveFactor":[
 				0.14126329123973846,
 				0.4564110338687897,

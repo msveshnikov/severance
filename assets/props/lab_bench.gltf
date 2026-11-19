@@ -36,7 +36,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"emissiveFactor":[
 				0.1171048210900949,
 				0.8944850561811535,
@@ -55,7 +54,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"lab_white",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -70,7 +68,6 @@
 		},
 		{
 			"alphaMode":"BLEND",
-			"doubleSided":true,
 			"name":"glass",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[

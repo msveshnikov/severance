@@ -212,7 +212,7 @@ def build_level(L):
         cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
         w, dd = x1 - x0, y1 - y0
         hm = wall_mat(rooms["hall" if "hall" in rooms else L["rooms"][0]["id"]]["wall"])
-        hd.append(box("hdr_" + d["id"], (w, dd, H - DOOR_H), (cx, -cy, DOOR_H), hm))
+        hd.append(box("hdr_" + d["id"], (w, dd, H - DOOR_H - 0.012), (cx, -cy, DOOR_H), hm))
         # door frame trim on both faces
         trim = mat("door_trim", "#c9cdc6", rough=0.5)
         horiz = w > dd

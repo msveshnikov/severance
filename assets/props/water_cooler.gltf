@@ -26,7 +26,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"name":"plastic_white",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -40,7 +39,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"water_blue",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -54,7 +52,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"red_mark",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -68,7 +65,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"tap_blue",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[

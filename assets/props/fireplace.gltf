@@ -44,7 +44,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"emissiveFactor":[
 				1,
 				0.1946178376674652,
@@ -68,7 +67,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"hearth_stone",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -82,7 +80,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"black",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -96,7 +93,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"darkwood",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -110,7 +106,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"log",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[

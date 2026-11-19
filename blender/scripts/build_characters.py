@@ -13,6 +13,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from lib_geo import *  # noqa
 from lib_char import *  # noqa
 import lib_render as R
+import lib_char2 as H
 from mathutils import Vector, Quaternion
 
 ARGS = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
@@ -28,8 +29,9 @@ def smooth01(t):
 
 
 def relaxed_arms(q, amt=1.0):
-    q["upper_arm_L"] = Q("Y", 20 * amt) @ q.get("upper_arm_L", Quaternion())
-    q["upper_arm_R"] = Q("Y", -20 * amt) @ q.get("upper_arm_R", Quaternion())
+    # adult proportions: the rest pose already hangs naturally, open the arms a touch so hands clear the hips
+    q["upper_arm_L"] = Q("Y", -5 * amt) @ q.get("upper_arm_L", Quaternion())
+    q["upper_arm_R"] = Q("Y", 5 * amt) @ q.get("upper_arm_R", Quaternion())
     q["forearm_L"] = Q("X", -12 * amt) @ q.get("forearm_L", Quaternion())
     q["forearm_R"] = Q("X", -12 * amt) @ q.get("forearm_R", Quaternion())
     return q
@@ -46,7 +48,7 @@ def gait(ph, amp, knee, arm, lean=0.0, arm_bend=15, bounce=0.02, crouch=0.0):
         q["shin_" + s] = Q("X", kb)
         q["foot_" + s] = Q("X", -(th + kb) * 0.5 + 5)
         a = arm * math.sin(p)
-        q["upper_arm_" + s] = Q("X", a) @ Q("Y", sgn * 18)
+        q["upper_arm_" + s] = Q("X", a) @ Q("Y", -sgn * 4)
         q["forearm_" + s] = Q("X", -arm_bend - max(0, -a) * 0.6)
     q["hips"] = Q("Z", 6 * math.sin(ph) * (amp / 30))
     q["chest"] = Q("X", lean) @ Q("Z", -9 * math.sin(ph) * (amp / 30))
@@ -146,7 +148,7 @@ def sit_pose(q=None):
         q["thigh_" + s] = Q("X", -88)
         q["shin_" + s] = Q("X", 88)
         q["foot_" + s] = Q("X", 0)
-    return q, Vector((0, 0.05, -0.27))
+    return q, H.SIT_HIPS.copy()
 
 
 def A_sit(t, P):
@@ -478,41 +480,41 @@ def vest(c):
 
 
 ROSTER = {
-    # the innies of Macrodata Refinement
-    "mark": dict(skin="#e8b894", top="suit", top_c="#3d4249", pants="#3d4249", shoes="#1d1f22", hair_c="#3a2a20",
-                 extras=[hair_short("#3a2a20", None), suit("#f2f2ee", "#2a2f3a", "#33373d"), lanyard()]),
-    "helly": dict(skin="#f2c6a8", top="blouse", top_c="#3b6aa8", pants="#f2c6a8", skirt="#24262b", shoes="#1d1f22",
-                  hair_c="#b0452a", pant_cuff=False,
-                  extras=[hair_ponytail("#b0452a", None), lashes, lanyard()]),
-    "dylan": dict(skin="#e9b48e", top="shirt_short", top_c="#6d9ccf", pants="#2b2d33", shoes="#1d1f22",
-                  hair_c="#5a3a22", glasses=True, belly=0.06, sleeves=False,
-                  extras=[hair_curly("#5a3a22", None), short_sleeves("#6d9ccf"), suit("#6d9ccf", "#2a3550", None, False),
-                          lanyard()]),
-    "irving": dict(skin="#e6b08f", top="suit", top_c="#27324a", pants="#27324a", shoes="#1d1f22", hair_c="#a3a3a3",
-                   mustache="#8f8f8f", height=1.05,
-                   extras=[hair_short("#a3a3a3", None), suit("#f2f2ee", "#22304a", "#202a3e"), lanyard()]),
+    # the innies of Macrodata Refinement (original designs; colours from the old game's sprites)
+    "mark": dict(skin="#e3b08c", top="suit", top_c="#3b4047", pants="#3b4047", shirt="#f0f0ea", tie="#27303e",
+                 lapel="#33373d", hair_c="#3a2a1f", stubble="#b98f74", eyes="#5a4330", jaw=1.06,
+                 extras=[H.hair_short_part("#3a2a1f"), H.lanyard()]),
+    "helly": dict(skin="#f1c7ab", female=True, top="blouse", top_c="#3b6aa8", skirt="#202228", pants="#e8bea2",
+                  shoes="#1d1f22", hair_c="#a8422a", eyes="#4b6a3a", lip="#c0756a", bare_legs=True, heels=True,
+                  extras=[H.hair_ponytail("#a8422a"), H.lanyard()]),
+    "dylan": dict(skin="#e6b18d", top="shirt", top_c="#7aa6d6", sleeves="short", tie="#26324d", pants="#2a2c32",
+                  hair_c="#4e3422", glasses=True, belly=0.035, jaw=1.08, eyes="#3d2a1c",
+                  extras=[H.hair_wavy("#4e3422"), H.lanyard()]),
+    "irving": dict(skin="#e2ad8c", top="suit", top_c="#25304a", pants="#25304a", tie="#1e2a44", lapel="#1f2940",
+                   hair_c="#a7a7a5", brow_c="#8c8c8a", mustache="#9a9a98", height=1.04, eyes="#4a5560",
+                   extras=[H.hair_combed_back("#a7a7a5"), H.lanyard(), H.pocket_square()]),
     # management and staff
-    "milchick": dict(skin="#7a4b35", top="plain", top_c="#f3f3ef", pants="#2e3036", shoes="#1d1f22",
-                     hair_c="#1a1a1a", mustache="#1a1a1a", height=1.02,
-                     extras=[hair_slick("#1a1a1a"), suit("#f3f3ef", "#4a4f57", None, False)]),
-    "cobel": dict(skin="#f0c8b0", top="dress", top_c="#4a6a9a", pants="#3a3a42", skirt="#4a6a9a", shoes="#1d1f22",
-                  hair_c="#c9c9cf", pant_cuff=False,
-                  extras=[hair_bun("#c9c9cf", None), cardigan("#3a5480"), lashes]),
-    "burt": dict(skin="#ecc0a0", top="plain", top_c="#b9bec4", pants="#3a3d44", shoes="#3a2a20", hair_c="#e8e8e8",
-                 glasses=True, mustache="#e0e0e0", height=1.02,
-                 extras=[bald_sides("#e8e8e8"), apron("#6f8f4a"), lanyard("#5f8c6a")]),
-    "casey": dict(skin="#efc9b0", top="dress", top_c="#8aa7ad", pants="#efc9b0", skirt="#7d989e", shoes="#3a3d44",
-                  hair_c="#e6cf8a", pant_cuff=False, height=0.96,
-                  extras=[hair_bob("#e6cf8a"), lashes]),
-    "graner": dict(skin="#e3b292", top="suit", top_c="#1f2a40", pants="#1f2a40", shoes="#1d1f22", hair_c="#8f8f8f",
-                   glasses=True, belly=0.05, height=1.03,
-                   extras=[hair_short("#8f8f8f", None), suit("#e9ecef", "#1b2235", "#18213a"), headset]),
-    "keeper": dict(skin="#e8b896", top="robe", top_c="#f2f2ec", pants="#4a4f57", shoes="#e9e9e4", hair_c="#6b4a2e",
-                   glasses=True, extras=[hair_bun("#6b4a2e", None), lashes]),
+    "milchick": dict(skin="#7a4a35", top="shirt", top_c="#f3f3ef", tie="#55606c", pants="#2c2e34", hair_c="#161414",
+                     mustache="#161414", height=1.02, eyes="#2a1a12", lip="#6e3e34",
+                     extras=[H.hair_slick("#161414")]),
+    "cobel": dict(skin="#efc8b2", female=True, top="dress", top_c="#4a6a9a", pants="#3a3a42", skirt=None,
+                  shoes="#1d1f22", hair_c="#c4c4ca", brow_c="#9a9aa0", eyes="#5d7088", lip="#b97a74", heels=True,
+                  extras=[H.hair_bun("#c4c4ca", low=True), H.cardigan("#34507a")]),
+    "burt": dict(skin="#ebbfa0", top="shirt", top_c="#b7bcc2", pants="#3a3d44", shoes="#3a2a20", hair_c="#e6e6e4",
+                 glasses=True, mustache="#e2e2e0", height=1.01, eyes="#5a6a74",
+                 extras=[H.hair_bald_sides("#e6e6e4"), H.apron("#6f8f4a"), H.lanyard("#5f8c6a")]),
+    "casey": dict(skin="#efcab3", female=True, top="dress", top_c="#8aa7ad", pants="#e9c4ae", shoes="#3a3d44",
+                  hair_c="#e3cc8a", brow_c="#c9b07a", eyes="#6a8aa0", lip="#c48a80", height=0.97, bare_legs=True,
+                  extras=[H.hair_bob("#e3cc8a")]),
+    "graner": dict(skin="#e0ae90", top="suit", top_c="#1f2a40", pants="#1f2a40", tie="#1b2235", lapel="#18213a",
+                   hair_c="#8e8e8e", glasses=True, belly=0.03, height=1.03, jaw=1.1, eyes="#4a4a4a",
+                   extras=[H.hair_short_part("#8e8e8e"), H.headset]),
+    "keeper": dict(skin="#e6b896", female=True, top="labcoat", top_c="#f1f1eb", pants="#4a4f57", shoes="#e6e6e0",
+                   hair_c="#6b4a2e", glasses=True, eyes="#4a3a2a", extras=[H.hair_bun("#6b4a2e")]),
     # Kier Eagan's wax likeness (Perpetual Wing)
-    "kier": dict(skin="#efd2b8", top="robe", top_c="#1e1e22", pants="#1e1e22", shoes="#2a1e16", hair_c="#c9c4ba",
-                 mustache="#c9c4ba", height=1.06, statue=True, expression="angry",
-                 extras=[hair_short("#c9c4ba", None), beard("#c9c4ba"), vest("#5a4630"), cane]),
+    "kier": dict(skin="#ecd2ba", top="coat", top_c="#1c1c20", pants="#1c1c20", shoes="#2a1e16", shirt="#e9e2d2",
+                 tie="#3a2c22", hair_c="#c9c4ba", beard="#c9c4ba", mustache="#c9c4ba", height=1.05, statue=True,
+                 extras=[H.hair_combed_back("#c9c4ba"), H.vest("#5a4630"), H.cane]),
 }
 
 
@@ -622,7 +624,7 @@ GOAT_LIB = [("idle", 48, G_idle, True), ("walk", 16, G_walk, True), ("eat", 48, 
 # ------------------------------------------------------------------ build / export / renders
 def build(name, spec):
     coll = collection(name)
-    rig, meshes = human(name, coll, spec)
+    rig, meshes = H.human(name, coll, spec)
     if spec.get("height"):
         rig.scale = (spec["height"],) * 3
     lib = STATUE_LIB if spec.get("statue") else [x for x in LIB if (ANIMS is None or x[0] in ANIMS)]
@@ -706,7 +708,7 @@ def render_char(rig, meshes, name, statue=False, goat=False):
     if gp:
         gp.hide_render = True
     pose_at(rig, P, A_idle, 0.0)
-    R.camera(loc=(0.55 * h, -1.9 * h, 1.62 * h), target=(0, 0, 1.43 * h), lens=60)
+    R.camera(loc=(0.42 * h, -1.45 * h, 1.72 * h), target=(0, 0, 1.6 * h), lens=70)
     R.render(os.path.join(ASSETS, "ui", "portrait_%s.png" % name))
     sc.render.film_transparent = False
     sc.render.resolution_x, sc.render.resolution_y = old

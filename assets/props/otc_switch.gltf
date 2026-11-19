@@ -54,7 +54,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"emissiveFactor":[
 				1,
 				0.02955683507025242,
@@ -78,7 +77,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"steel",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -92,7 +90,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"otc_box",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -106,7 +103,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"red_mark",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -120,7 +116,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"black",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[

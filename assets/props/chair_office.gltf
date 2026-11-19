@@ -31,7 +31,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"name":"chair_fabric",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -45,7 +44,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"steel",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -59,7 +57,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"black",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[

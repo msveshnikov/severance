@@ -110,8 +110,9 @@ func _next() -> void:
 		return
 	card.visible = false
 	panel.visible = true
-	if sp == "?":
-		var who: String = Game.active
+	if sp.begins_with("?"):
+		# "?<id>": the player picks what <id> answers; plain "?" = the active innie answers
+		var who: String = sp.substr(1) if sp.length() > 1 else Game.active
 		_show_speaker(who)
 		text_lbl.text = ""
 		cont_lbl.visible = false

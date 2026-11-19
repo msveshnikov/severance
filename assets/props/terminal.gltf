@@ -41,7 +41,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"emissiveFactor":[
 				0.1171048210900949,
 				0.8944850561811535,
@@ -60,7 +59,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"crt_shell",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -74,7 +72,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"crt_bezel",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -88,7 +85,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"brass",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -102,7 +98,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"crt_keys",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -116,7 +111,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"trackball",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[

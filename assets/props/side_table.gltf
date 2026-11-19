@@ -31,7 +31,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"name":"wood",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -42,7 +41,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"plastic_white",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -56,7 +54,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"paper",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[

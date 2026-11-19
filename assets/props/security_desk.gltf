@@ -29,7 +29,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"name":"sec_desk",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -43,7 +42,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"desk_top",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -57,7 +55,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"black",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -71,7 +68,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"emissiveFactor":[
 				1,
 				0.02955683507025242,
@@ -95,7 +91,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"emissiveFactor":[
 				0.05126945674419403,
 				1,
@@ -119,7 +114,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"metal",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[

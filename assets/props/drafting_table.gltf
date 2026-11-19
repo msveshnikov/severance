@@ -37,7 +37,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"name":"wood_light",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -48,7 +47,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"metal",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -62,7 +60,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"paper",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -76,7 +73,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"ruler",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -90,7 +86,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"stool",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[

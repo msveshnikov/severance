@@ -26,7 +26,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"name":"hay",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -37,7 +36,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"twine",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[

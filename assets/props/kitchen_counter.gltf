@@ -26,7 +26,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"name":"counter_base",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -40,7 +39,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"counter_top",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -54,7 +52,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"steel",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[

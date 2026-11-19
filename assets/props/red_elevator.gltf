@@ -84,7 +84,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"emissiveFactor":[
 				1,
 				0.02955683507025242,
@@ -108,7 +107,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"emissiveFactor":[
 				1,
 				0.7605245113372803,
@@ -132,7 +130,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"steel",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -146,7 +143,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"elev_frame",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -160,7 +156,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"black",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -174,7 +169,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"red_mark",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[

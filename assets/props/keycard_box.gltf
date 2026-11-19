@@ -36,7 +36,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"name":"card_red",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -50,7 +49,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"black",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[

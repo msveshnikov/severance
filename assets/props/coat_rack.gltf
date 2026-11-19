@@ -26,7 +26,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"name":"darkwood",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -40,7 +39,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"coat_grey",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[

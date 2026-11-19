@@ -124,7 +124,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"emissiveFactor":[
 				0.14126329123973846,
 				0.4564110338687897,
@@ -148,7 +147,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"monitor_frame",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -162,7 +160,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"crt_bezel",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[

@@ -37,7 +37,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"name":"logo_navy",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -51,7 +50,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"emissiveFactor":[
 				0.13298061092169,
 				0.21828978386953146,

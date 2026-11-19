@@ -36,7 +36,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"emissiveFactor":[
 				0.1171048210900949,
 				0.8944850561811535,
@@ -55,7 +54,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"vend",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -70,7 +68,6 @@
 		},
 		{
 			"alphaMode":"BLEND",
-			"doubleSided":true,
 			"name":"glass",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -84,7 +81,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"snack_c9a24a",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -98,7 +94,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"snack_b3262b",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -112,7 +107,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"snack_5f8c6a",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -126,7 +120,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"snack_e9ece6",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[

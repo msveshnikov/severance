@@ -31,7 +31,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"name":"fabric_green",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -45,7 +44,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"darkwood",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[

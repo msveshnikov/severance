@@ -26,7 +26,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"name":"tent_cloth",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -40,7 +39,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"metal",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -54,7 +52,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"tent_dark",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[

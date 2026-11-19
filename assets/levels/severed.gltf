@@ -41,7 +41,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"name":"FLOOR_hall_floor",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -52,7 +51,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"FLOOR_carpet_grey",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -63,7 +61,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"FLOOR_carpet_blue",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -74,7 +71,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"FLOOR_carpet_green",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -85,7 +81,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"FLOOR_carpet_warm",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -96,7 +91,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"FLOOR_carpet_teal",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -107,7 +101,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"FLOOR_tiles_small",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -118,7 +111,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"FLOOR_carpet_ochre",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -129,7 +121,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"FLOOR_tiles_check",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -140,7 +131,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"FLOOR_marble",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -151,7 +141,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"FLOOR_wood_floor",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -162,7 +151,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"WALL_wall_hall",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -173,7 +161,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"door_trim",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -187,7 +174,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"WALL_wall_white",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -198,7 +184,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"WALL_wall_tile",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -209,7 +194,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"WALL_wall_grey",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -220,7 +204,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"WALL_wall_green",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -231,7 +214,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"WALL_wall_cream",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -242,7 +224,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"WALL_wall_wood",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -253,7 +234,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"WALL_wall_cabin",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -264,7 +244,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"WALLTOP",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -1005,7 +984,7 @@
 			"count":288,
 			"max":[
 				53.5,
-				2.700000047683716,
+				2.687999963760376,
 				34.5
 			],
 			"min":[

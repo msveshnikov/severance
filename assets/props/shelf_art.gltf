@@ -31,7 +31,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"name":"wood_light",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -42,7 +41,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"art_5f8c6a",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -56,7 +54,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"art_b3262b",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -70,7 +67,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"art_e9ece6",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -84,7 +80,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"art_c9a24a",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -98,7 +93,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"art_1f3a5f",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[

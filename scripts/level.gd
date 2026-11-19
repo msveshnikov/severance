@@ -128,8 +128,12 @@ func find_path(from: Vector3, to: Vector3) -> PackedVector3Array:
 	var pts := PackedVector3Array()
 	for c in ids:
 		pts.append(cell_center(c))
-	if pts.size() > 0:
-		pts[pts.size() - 1] = nearest_walkable(to) if not walkable_pos(to) else Vector3(to.x, 0, to.z)
+	# only snap to the exact click when the path really reached the target cell (a locked room gives a
+	# partial path that ends at the wall: going on to the click would walk through it)
+	if pts.size() > 0 and ids[ids.size() - 1] == b and walkable_pos(to):
+		var prev := pts[pts.size() - 2] if pts.size() > 1 else from
+		if line_clear(prev, to):
+			pts[pts.size() - 1] = Vector3(to.x, 0, to.z)
 	return _smooth(from, pts)
 
 

@@ -31,7 +31,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"name":"darkwood",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -45,7 +44,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"book_7a2e2e",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -59,7 +57,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"book_26303a",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -73,7 +70,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"book_d8d2c0",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -87,7 +83,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"book_b08a3a",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -101,7 +96,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"book_3d6b45",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -115,7 +109,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"book_5a3a6a",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -129,7 +122,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"book_2e4a7a",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[

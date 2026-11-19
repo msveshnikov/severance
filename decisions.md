@@ -44,3 +44,18 @@
 - **Android package kept as `com.maxsoft.Severance`** (the existing Google Play app, Cordova build code 10007) →
   2.0.0 (code 20000). The Play AAB is signed with the same upload key as the old app.
 - **Deploy**: the web build replaces the old game at the root of https://severance.lol/ (owner's request).
+
+## 2.1.0 (2026-11-19, after the owner's playtest)
+
+- **Flicker fixed at the source**: Blender materials are now single-sided (`use_backface_culling`), so the hidden
+  bottom faces of stacked boxes no longer z-fight with the floor or the box below; door headers stop 12 mm under the
+  wall caps; the blob shadow sits 3.5 cm above the floor (rugs are 1.6 cm).
+- **No more walking through walls**: when the target is unreachable (a locked room), A* returns a partial path and the
+  game used to append the exact click — a straight line through the wall. The final point is now only snapped when the
+  path really reached the target cell. `--walltest` checks 1200 random paths and 800 WASD runs per build (0 violations).
+- **Choices in dialogue** are spoken by the person answering (`["?helly", "A|B"]`), not by the active innie.
+- **Sitting**: the innie steps in front of the chair, turns, sits and types for a second before a terminal minigame opens.
+- **New cast (lib_char2.py)**: adult proportions (~7.3 heads, 1.76 m) instead of big-headed cartoons, small natural
+  eyes, lips, nose, jaw, sculpted hair, tailored clothes (lapels, collars, cuffs, buttons, pockets), hands with
+  fingers. The designs stay original: colours from the old game's sprites, no attempt to copy the actors' likenesses,
+  so no ChatGPT "look-alike" portraits either — portraits are rendered from the new models.

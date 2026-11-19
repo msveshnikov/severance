@@ -10,7 +10,7 @@ pull the Overtime Contingency — and dance to Defiant Jazz. Play in the browser
 **[▶ Play online](https://severance.lol/)** · [Google Play](https://play.google.com/store/apps/details?id=com.maxsoft.Severance) · [Android APK](https://github.com/msveshnikov/severance/releases/latest/download/Severance.apk) · [Windows exe](https://github.com/msveshnikov/severance/releases/latest/download/Severance.exe)
 
 <img src="docs/hall.jpg" width="49%"> <img src="docs/mdr.jpg" width="49%">
-<img src="docs/stealth.jpg" width="49%"> <img src="docs/dance.jpg" width="49%">
+<img src="docs/stealth.jpg" width="49%"> <img src="docs/orientation.jpg" width="49%">
 
 </div>
 

@@ -77,6 +77,8 @@ def mat(name, color="white", rough=0.85, tex=None, tile=2.0, emit=None, emit_str
         return MATS[name]
     m = bpy.data.materials.new(name)
     m.use_nodes = True
+    # single-sided: hidden bottom faces of stacked boxes must not z-fight with the floor / the box below
+    m.use_backface_culling = True
     nt = m.node_tree
     bsdf = next(n for n in nt.nodes if n.type == "BSDF_PRINCIPLED")
     bsdf.inputs["Roughness"].default_value = rough

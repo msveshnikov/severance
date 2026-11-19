@@ -31,7 +31,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"name":"red_mark",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -45,7 +44,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"metal",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[

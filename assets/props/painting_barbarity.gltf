@@ -41,7 +41,6 @@
 	],
 	"materials":[
 		{
-			"doubleSided":true,
 			"name":"art_art_ricken_book",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -52,7 +51,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"frame_dark",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
@@ -66,7 +64,6 @@
 			}
 		},
 		{
-			"doubleSided":true,
 			"name":"brass",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
