@@ -1,0 +1,10 @@
+.godot/
+build/
+*.tmp
+renders/
+__pycache__/
+android/
+notes.md
+*.jks
+*.keystore
+export_credentials.cfg

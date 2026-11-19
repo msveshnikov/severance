@@ -1,0 +1,1524 @@
+{
+"name": "severed",
+"cell": 0.5,
+"w": 132,
+"h": 86,
+"wall_h": 2.7,
+"door_h": 2.25,
+"grid": [
+"                                                                                                                                    ",
+"                                                                                                                                    ",
+"                                                                                                                                    ",
+"                 ##########################################################################################                         ",
+"                 #........................................................................................#                         ",
+"                 #........................................................................................#                         ",
+"                 #........................................................................................#                         ",
+"                 #........................................................................................#                         ",
+"                 #........................................................................................#                         ",
+"                 #........................................................................................#                         ",
+"                 #......############################################################################......#######################   ",
+"                 #......#..............#...x.x..........................#..........................#......#.....................#   ",
+"                 #......#..............#...x.x.......................x..#........................x.#......#.....................#   ",
+"                 #......#..............#................................#..........................#......#.....................#   ",
+"                 #......#..............#................................#..........................#......#................xxxx.#   ",
+"                 #......#..............#................................#..........................#......#................xxxx.#   ",
+"                 #......D......xx......#................................#........xx.....xx.........D......#.....................#   ",
+"                 #......D......xx......#................................#........xx.....xx.........D......#.....................#   ",
+"                 #......D..............#................................#..........................D......D.....................#   ",
+"                 #......#..............#................................#..........................#......D.....................#   ",
+"                 #......#..............#................................#..........................#......D........xxxx.........#   ",
+"                 #......#..............#................................#..........................#......#........xxxx.........#   ",
+"                 #......#..............#.............xxxxxx.............#..........................#......#.....................#   ",
+"                 #......################.............xxxxxx.............############################......#.....................#   ",
+"                 #......#...........xxx#.............xxxxxx.............#..........................#......#.....................#   ",
+"                 #......#..............#.............xxxxxx.............#..........................#......#.....................#   ",
+"                 #......#..............#.............xxxxxx.............#.....xx.....xx.....xx.....#......#.....................#   ",
+"                 #......#..............#.............xxxxxx.............#.....xx.....xx.....xx.....#......#.....................#   ",
+"                 #......#.....xxxx.....#................................#..........................#......#.....................#   ",
+"                 #......#.....xxxx.....#................................#..........................#......#.....................#   ",
+"                 #......#..............#................................#....xxxxxxxxxxxxxxxxxx....#......#######################   ",
+"                 #......#..............#................................#..........................#......#                         ",
+"                 #......#..............#................................#..........................#......#                         ",
+"                 #......#.x............#................................#..........................#......#                         ",
+"                 #......#.x............#................................#..........................#......#                         ",
+"                 #......#.x............#................................#....................x.....#......#                         ",
+"                 #......#..............#................................#.....xxxx.................#......#                         ",
+"                 #......#..............#.x............................x.#..........................#......#                         ",
+"                 #......#.............x#................................#..........................#......#                         ",
+"                 #......######DDD#####################DDDD##########################DDD#############......#######################   ",
+"                 #..............................................................................................................#   ",
+"                 #..............................................................................................................#   ",
+"                 #..............................................................................................................#   ",
+"                 #..............................................................................................................#   ",
+"                 #...........xxxxxxxx...........................................................................................#   ",
+"                 #...........xxxxxxxx...........................................................................................#   ",
+"                 #......##############################DDDD##########################DDD#############......#######################   ",
+"                 #......#....xxxxxxxx..#................................#..........................#......#                         ",
+"                 #......#..............#..............................x.#..........................#......#                         ",
+"                 #......#..............#...xx...........................#..........................#......#                         ",
+"                 #......D..............#................................#.............xxxxxx.......#......#                         ",
+"   ###############......D..............#.......................xxxx.....#..........................#......#                         ",
+"   #.............#......D..............#.......................xxxx.....#..........................#......#                         ",
+"   #............x#x.....#..............#................................#..........................#......#                         ",
+"   #.............#x.....#..............#................................#..........................#......#                         ",
+"   #.............#x.....#..............#................................#..........................#......#                         ",
+"   #.............#x.....################........xx...xx.................#..........................#......#                         ",
+"   #.............#......#..............#........xx...xx.................#..........................#......#                         ",
+"   #.............#......#..............#........xx...xx.................#..........................#......#                         ",
+"   #.............#......#..............#................................############################......#                         ",
+"   #.............#......#..............#................................#......xxxxxxxxxx......x...#......#                         ",
+"   #.............D......#..............#................................#..........................#......#                         ",
+"   #.............D......#..............#........xx...xx.................#..........................#......#                         ",
+"   #.............D......#.......xx.....#........xx...xx.................#..........................#......#                         ",
+"   #.............D......D.......xx.....#........xx...xx.......xx........#..........................#......#                         ",
+"   #.............#......D.......xx.....#......................xx........#..........................#......#                         ",
+"   #.............#......D.......xx.....#................................#..........................D......#                         ",
+"   #.............#......#.......xx.....#................................#...........xx.............D......#                         ",
+"   #.............#......#.......xx.....#................................#...........xx.............D......#                         ",
+"   #.............#......#..............#................................#..........................#......#                         ",
+"   #.............#......#..............#................................#x.........................#......#                         ",
+"   #.............#......#..............#................................#x.........................#......#                         ",
+"   #.............#......#..............#................................#..........................#......#                         ",
+"   #.............#......#..............#.x............................x.#..........................#......#                         ",
+"   ###############......#..............#................................#..........................#......#                         ",
+"                 #......############################################################################......#                         ",
+"                 #........................................................................................#                         ",
+"                 #........................................................................................#                         ",
+"                 #........................................................................................#                         ",
+"                 #........................................................................................#                         ",
+"                 #........................................................................................#                         ",
+"                 #........................................................................................#                         ",
+"                 ##########################################################################################                         ",
+"                                                                                                                                    ",
+"                                                                                                                                    ",
+"                                                                                                                                    "
+],
+"room_ids": [
+"hall",
+"break",
+"cobel",
+"mdr",
+"wellness",
+"perpetual",
+"restroom",
+"orientation",
+"od",
+"security",
+"kitchen",
+"lobby",
+"waffle"
+],
+"room_rows": [
+"                                                                                                                                    ",
+"                                                                                                                                    ",
+"                                                                                                                                    ",
+"                                                                                                                                    ",
+"                  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA                          ",
+"                  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA                          ",
+"                  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA                          ",
+"                  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA                          ",
+"                  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA                          ",
+"                  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA                          ",
+"                  AAAAAA                                                                            AAAAAA                          ",
+"                  AAAAAA BBBBBBBBBBBBBB DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD EEEEEEEEEEEEEEEEEEEEEEEEEE AAAAAA MMMMMMMMMMMMMMMMMMMMM    ",
+"                  AAAAAA BBBBBBBBBBBBBB DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD EEEEEEEEEEEEEEEEEEEEEEEEEE AAAAAA MMMMMMMMMMMMMMMMMMMMM    ",
+"                  AAAAAA BBBBBBBBBBBBBB DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD EEEEEEEEEEEEEEEEEEEEEEEEEE AAAAAA MMMMMMMMMMMMMMMMMMMMM    ",
+"                  AAAAAA BBBBBBBBBBBBBB DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD EEEEEEEEEEEEEEEEEEEEEEEEEE AAAAAA MMMMMMMMMMMMMMMMMMMMM    ",
+"                  AAAAAA BBBBBBBBBBBBBB DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD EEEEEEEEEEEEEEEEEEEEEEEEEE AAAAAA MMMMMMMMMMMMMMMMMMMMM    ",
+"                  AAAAAAABBBBBBBBBBBBBB DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD EEEEEEEEEEEEEEEEEEEEEEEEEEAAAAAAA MMMMMMMMMMMMMMMMMMMMM    ",
+"                  AAAAAAABBBBBBBBBBBBBB DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD EEEEEEEEEEEEEEEEEEEEEEEEEEAAAAAAA MMMMMMMMMMMMMMMMMMMMM    ",
+"                  AAAAAAABBBBBBBBBBBBBB DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD EEEEEEEEEEEEEEEEEEEEEEEEEEAAAAAAAAMMMMMMMMMMMMMMMMMMMMM    ",
+"                  AAAAAA BBBBBBBBBBBBBB DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD EEEEEEEEEEEEEEEEEEEEEEEEEE AAAAAAAMMMMMMMMMMMMMMMMMMMMM    ",
+"                  AAAAAA BBBBBBBBBBBBBB DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD EEEEEEEEEEEEEEEEEEEEEEEEEE AAAAAAAMMMMMMMMMMMMMMMMMMMMM    ",
+"                  AAAAAA BBBBBBBBBBBBBB DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD EEEEEEEEEEEEEEEEEEEEEEEEEE AAAAAA MMMMMMMMMMMMMMMMMMMMM    ",
+"                  AAAAAA BBBBBBBBBBBBBB DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD EEEEEEEEEEEEEEEEEEEEEEEEEE AAAAAA MMMMMMMMMMMMMMMMMMMMM    ",
+"                  AAAAAA                DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD                            AAAAAA MMMMMMMMMMMMMMMMMMMMM    ",
+"                  AAAAAA CCCCCCCCCCCCCC DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD FFFFFFFFFFFFFFFFFFFFFFFFFF AAAAAA MMMMMMMMMMMMMMMMMMMMM    ",
+"                  AAAAAA CCCCCCCCCCCCCC DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD FFFFFFFFFFFFFFFFFFFFFFFFFF AAAAAA MMMMMMMMMMMMMMMMMMMMM    ",
+"                  AAAAAA CCCCCCCCCCCCCC DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD FFFFFFFFFFFFFFFFFFFFFFFFFF AAAAAA MMMMMMMMMMMMMMMMMMMMM    ",
+"                  AAAAAA CCCCCCCCCCCCCC DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD FFFFFFFFFFFFFFFFFFFFFFFFFF AAAAAA MMMMMMMMMMMMMMMMMMMMM    ",
+"                  AAAAAA CCCCCCCCCCCCCC DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD FFFFFFFFFFFFFFFFFFFFFFFFFF AAAAAA MMMMMMMMMMMMMMMMMMMMM    ",
+"                  AAAAAA CCCCCCCCCCCCCC DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD FFFFFFFFFFFFFFFFFFFFFFFFFF AAAAAA MMMMMMMMMMMMMMMMMMMMM    ",
+"                  AAAAAA CCCCCCCCCCCCCC DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD FFFFFFFFFFFFFFFFFFFFFFFFFF AAAAAA                          ",
+"                  AAAAAA CCCCCCCCCCCCCC DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD FFFFFFFFFFFFFFFFFFFFFFFFFF AAAAAA                          ",
+"                  AAAAAA CCCCCCCCCCCCCC DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD FFFFFFFFFFFFFFFFFFFFFFFFFF AAAAAA                          ",
+"                  AAAAAA CCCCCCCCCCCCCC DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD FFFFFFFFFFFFFFFFFFFFFFFFFF AAAAAA                          ",
+"                  AAAAAA CCCCCCCCCCCCCC DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD FFFFFFFFFFFFFFFFFFFFFFFFFF AAAAAA                          ",
+"                  AAAAAA CCCCCCCCCCCCCC DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD FFFFFFFFFFFFFFFFFFFFFFFFFF AAAAAA                          ",
+"                  AAAAAA CCCCCCCCCCCCCC DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD FFFFFFFFFFFFFFFFFFFFFFFFFF AAAAAA                          ",
+"                  AAAAAA CCCCCCCCCCCCCC DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD FFFFFFFFFFFFFFFFFFFFFFFFFF AAAAAA                          ",
+"                  AAAAAA CCCCCCCCCCCCCC DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD FFFFFFFFFFFFFFFFFFFFFFFFFF AAAAAA                          ",
+"                  AAAAAA      AAA                     AAAA                          AAA             AAAAAA                          ",
+"                  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA    ",
+"                  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA    ",
+"                  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA    ",
+"                  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA    ",
+"                  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA    ",
+"                  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA    ",
+"                  AAAAAA                              AAAA                          AAA             AAAAAA                          ",
+"                  AAAAAA GGGGGGGGGGGGGG IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII JJJJJJJJJJJJJJJJJJJJJJJJJJ AAAAAA                          ",
+"                  AAAAAA GGGGGGGGGGGGGG IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII JJJJJJJJJJJJJJJJJJJJJJJJJJ AAAAAA                          ",
+"                  AAAAAA GGGGGGGGGGGGGG IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII JJJJJJJJJJJJJJJJJJJJJJJJJJ AAAAAA                          ",
+"                  AAAAAAAGGGGGGGGGGGGGG IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII JJJJJJJJJJJJJJJJJJJJJJJJJJ AAAAAA                          ",
+"                  AAAAAAAGGGGGGGGGGGGGG IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII JJJJJJJJJJJJJJJJJJJJJJJJJJ AAAAAA                          ",
+"    LLLLLLLLLLLLL AAAAAAAGGGGGGGGGGGGGG IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII JJJJJJJJJJJJJJJJJJJJJJJJJJ AAAAAA                          ",
+"    LLLLLLLLLLLLL AAAAAA GGGGGGGGGGGGGG IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII JJJJJJJJJJJJJJJJJJJJJJJJJJ AAAAAA                          ",
+"    LLLLLLLLLLLLL AAAAAA GGGGGGGGGGGGGG IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII JJJJJJJJJJJJJJJJJJJJJJJJJJ AAAAAA                          ",
+"    LLLLLLLLLLLLL AAAAAA GGGGGGGGGGGGGG IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII JJJJJJJJJJJJJJJJJJJJJJJJJJ AAAAAA                          ",
+"    LLLLLLLLLLLLL AAAAAA                IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII JJJJJJJJJJJJJJJJJJJJJJJJJJ AAAAAA                          ",
+"    LLLLLLLLLLLLL AAAAAA HHHHHHHHHHHHHH IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII JJJJJJJJJJJJJJJJJJJJJJJJJJ AAAAAA                          ",
+"    LLLLLLLLLLLLL AAAAAA HHHHHHHHHHHHHH IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII JJJJJJJJJJJJJJJJJJJJJJJJJJ AAAAAA                          ",
+"    LLLLLLLLLLLLL AAAAAA HHHHHHHHHHHHHH IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII                            AAAAAA                          ",
+"    LLLLLLLLLLLLL AAAAAA HHHHHHHHHHHHHH IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII KKKKKKKKKKKKKKKKKKKKKKKKKK AAAAAA                          ",
+"    LLLLLLLLLLLLLAAAAAAA HHHHHHHHHHHHHH IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII KKKKKKKKKKKKKKKKKKKKKKKKKK AAAAAA                          ",
+"    LLLLLLLLLLLLLAAAAAAA HHHHHHHHHHHHHH IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII KKKKKKKKKKKKKKKKKKKKKKKKKK AAAAAA                          ",
+"    LLLLLLLLLLLLLAAAAAAA HHHHHHHHHHHHHH IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII KKKKKKKKKKKKKKKKKKKKKKKKKK AAAAAA                          ",
+"    LLLLLLLLLLLLLAAAAAAAAHHHHHHHHHHHHHH IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII KKKKKKKKKKKKKKKKKKKKKKKKKK AAAAAA                          ",
+"    LLLLLLLLLLLLL AAAAAAAHHHHHHHHHHHHHH IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII KKKKKKKKKKKKKKKKKKKKKKKKKK AAAAAA                          ",
+"    LLLLLLLLLLLLL AAAAAAAHHHHHHHHHHHHHH IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII KKKKKKKKKKKKKKKKKKKKKKKKKKAAAAAAA                          ",
+"    LLLLLLLLLLLLL AAAAAA HHHHHHHHHHHHHH IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII KKKKKKKKKKKKKKKKKKKKKKKKKKAAAAAAA                          ",
+"    LLLLLLLLLLLLL AAAAAA HHHHHHHHHHHHHH IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII KKKKKKKKKKKKKKKKKKKKKKKKKKAAAAAAA                          ",
+"    LLLLLLLLLLLLL AAAAAA HHHHHHHHHHHHHH IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII KKKKKKKKKKKKKKKKKKKKKKKKKK AAAAAA                          ",
+"    LLLLLLLLLLLLL AAAAAA HHHHHHHHHHHHHH IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII KKKKKKKKKKKKKKKKKKKKKKKKKK AAAAAA                          ",
+"    LLLLLLLLLLLLL AAAAAA HHHHHHHHHHHHHH IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII KKKKKKKKKKKKKKKKKKKKKKKKKK AAAAAA                          ",
+"    LLLLLLLLLLLLL AAAAAA HHHHHHHHHHHHHH IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII KKKKKKKKKKKKKKKKKKKKKKKKKK AAAAAA                          ",
+"    LLLLLLLLLLLLL AAAAAA HHHHHHHHHHHHHH IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII KKKKKKKKKKKKKKKKKKKKKKKKKK AAAAAA                          ",
+"                  AAAAAA HHHHHHHHHHHHHH IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII KKKKKKKKKKKKKKKKKKKKKKKKKK AAAAAA                          ",
+"                  AAAAAA                                                                            AAAAAA                          ",
+"                  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA                          ",
+"                  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA                          ",
+"                  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA                          ",
+"                  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA                          ",
+"                  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA                          ",
+"                  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA                          ",
+"                                                                                                                                    ",
+"                                                                                                                                    ",
+"                                                                                                                                    ",
+"                                                                                                                                    "
+],
+"rooms": [
+{
+"id": "hall",
+"rects": [
+[
+9,
+2,
+53,
+5
+],
+[
+9,
+2,
+12,
+41
+],
+[
+50,
+2,
+53,
+41
+],
+[
+9,
+20,
+64,
+23
+],
+[
+9,
+38,
+53,
+41
+]
+],
+"floor": "hall_floor",
+"wall": "wall_hall"
+},
+{
+"id": "break",
+"rects": [
+[
+12.5,
+5.5,
+19.5,
+11.5
+]
+],
+"floor": "carpet_grey",
+"wall": "wall_white"
+},
+{
+"id": "cobel",
+"rects": [
+[
+12.5,
+12,
+19.5,
+19.5
+]
+],
+"floor": "carpet_blue",
+"wall": "wall_white"
+},
+{
+"id": "mdr",
+"rects": [
+[
+20,
+5.5,
+36,
+19.5
+]
+],
+"floor": "carpet_green",
+"wall": "wall_white"
+},
+{
+"id": "wellness",
+"rects": [
+[
+36.5,
+5.5,
+49.5,
+11.5
+]
+],
+"floor": "carpet_warm",
+"wall": "wall_wood"
+},
+{
+"id": "perpetual",
+"rects": [
+[
+36.5,
+12,
+49.5,
+19.5
+]
+],
+"floor": "carpet_teal",
+"wall": "wall_cream"
+},
+{
+"id": "restroom",
+"rects": [
+[
+12.5,
+23.5,
+19.5,
+28
+]
+],
+"floor": "tiles_small",
+"wall": "wall_tile"
+},
+{
+"id": "orientation",
+"rects": [
+[
+12.5,
+28.5,
+19.5,
+37.5
+]
+],
+"floor": "carpet_grey",
+"wall": "wall_white"
+},
+{
+"id": "od",
+"rects": [
+[
+20,
+23.5,
+36,
+37.5
+]
+],
+"floor": "carpet_ochre",
+"wall": "wall_green"
+},
+{
+"id": "security",
+"rects": [
+[
+36.5,
+23.5,
+49.5,
+29.5
+]
+],
+"floor": "tiles_check",
+"wall": "wall_grey"
+},
+{
+"id": "kitchen",
+"rects": [
+[
+36.5,
+30,
+49.5,
+37.5
+]
+],
+"floor": "tiles_check",
+"wall": "wall_tile"
+},
+{
+"id": "lobby",
+"rects": [
+[
+2,
+26,
+8.5,
+37
+]
+],
+"floor": "marble",
+"wall": "wall_white"
+},
+{
+"id": "waffle",
+"rects": [
+[
+53.5,
+5.5,
+64,
+15
+]
+],
+"floor": "wood_floor",
+"wall": "wall_cabin"
+}
+],
+"props": [
+{
+"a": "desk_pod",
+"x": 28,
+"y": 12.5,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "terminal",
+"x": 28,
+"y": 13.85,
+"yaw": 0,
+"z": 0.74,
+"id": "term_mark"
+},
+{
+"a": "terminal",
+"x": 26.65,
+"y": 12.5,
+"yaw": -90,
+"z": 0.74,
+"id": "term_helly"
+},
+{
+"a": "terminal",
+"x": 28,
+"y": 11.15,
+"yaw": 180,
+"z": 0.74,
+"id": "term_dylan"
+},
+{
+"a": "terminal",
+"x": 29.35,
+"y": 12.5,
+"yaw": 90,
+"z": 0.74,
+"id": "term_irving"
+},
+{
+"a": "chair_office",
+"x": 28,
+"y": 15.0,
+"yaw": 180,
+"z": 0.0,
+"id": "seat_mark"
+},
+{
+"a": "chair_office",
+"x": 25.5,
+"y": 12.5,
+"yaw": 90,
+"z": 0.0,
+"id": "seat_helly"
+},
+{
+"a": "chair_office",
+"x": 28,
+"y": 10.0,
+"yaw": 0,
+"z": 0.0,
+"id": "seat_dylan"
+},
+{
+"a": "chair_office",
+"x": 30.5,
+"y": 12.5,
+"yaw": -90,
+"z": 0.0,
+"id": "seat_irving"
+},
+{
+"a": "filing_cabinet",
+"x": 21.0,
+"y": 6.0,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "filing_cabinet",
+"x": 21.8,
+"y": 6.0,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "filing_cabinet",
+"x": 22.6,
+"y": 6.0,
+"yaw": 0,
+"z": 0.0,
+"id": "mdr_cabinet"
+},
+{
+"a": "water_cooler",
+"x": 34.8,
+"y": 6.1,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "plant_tall",
+"x": 35.3,
+"y": 18.8,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "plant_tall",
+"x": 20.7,
+"y": 18.8,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "coat_rack",
+"x": 25.8,
+"y": 19.0,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "painting_kier",
+"x": 28,
+"y": 5.5,
+"yaw": 0,
+"z": 1.55,
+"id": null
+},
+{
+"a": "wall_clock",
+"x": 32.5,
+"y": 5.5,
+"yaw": 0,
+"z": 2.15,
+"id": null
+},
+{
+"a": "board_quota",
+"x": 20.0,
+"y": 12.5,
+"yaw": 90,
+"z": 1.5,
+"id": "mdr_board"
+},
+{
+"a": "trash_bin",
+"x": 33.0,
+"y": 6.0,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "break_table",
+"x": 16.0,
+"y": 8.5,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "chair_simple",
+"x": 16.0,
+"y": 9.6,
+"yaw": 180,
+"z": 0.0,
+"id": "seat_break"
+},
+{
+"a": "chair_simple",
+"x": 16.0,
+"y": 7.4,
+"yaw": 0,
+"z": 0.0,
+"id": "seat_break_m"
+},
+{
+"a": "sign_compliance",
+"x": 16.0,
+"y": 5.5,
+"yaw": 0,
+"z": 1.6,
+"id": null
+},
+{
+"a": "plant_small",
+"x": 19.0,
+"y": 6.0,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "exec_desk",
+"x": 16.0,
+"y": 14.6,
+"yaw": 0,
+"z": 0.0,
+"id": "cobel_desk"
+},
+{
+"a": "chair_exec",
+"x": 16.0,
+"y": 13.4,
+"yaw": 0,
+"z": 0.0,
+"id": "seat_cobel"
+},
+{
+"a": "bookshelf",
+"x": 18.6,
+"y": 12.25,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "couch",
+"x": 13.3,
+"y": 17.3,
+"yaw": 90,
+"z": 0.0,
+"id": null
+},
+{
+"a": "plant_tall",
+"x": 19.0,
+"y": 19.0,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "painting_tempers",
+"x": 14.0,
+"y": 12.0,
+"yaw": 0,
+"z": 1.55,
+"id": null
+},
+{
+"a": "armchair",
+"x": 41.0,
+"y": 8.6,
+"yaw": 90,
+"z": 0.0,
+"id": "seat_casey"
+},
+{
+"a": "armchair",
+"x": 44.4,
+"y": 8.6,
+"yaw": -90,
+"z": 0.0,
+"id": "seat_wellness"
+},
+{
+"a": "side_table",
+"x": 42.7,
+"y": 7.0,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "floor_lamp",
+"x": 38.0,
+"y": 6.2,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "painting_landscape",
+"x": 42.7,
+"y": 5.5,
+"yaw": 0,
+"z": 1.55,
+"id": null
+},
+{
+"a": "plant_tall",
+"x": 48.8,
+"y": 6.2,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "rug",
+"x": 42.7,
+"y": 8.6,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "pedestal",
+"x": 39.5,
+"y": 13.6,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "pedestal",
+"x": 43.0,
+"y": 13.6,
+"yaw": 0,
+"z": 0.0,
+"id": "kier_wax"
+},
+{
+"a": "pedestal",
+"x": 46.5,
+"y": 13.6,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "rope_line",
+"x": 43.0,
+"y": 15.3,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "display_case",
+"x": 46.8,
+"y": 17.6,
+"yaw": 0,
+"z": 0.0,
+"id": "display_case"
+},
+{
+"a": "painting_young_kier",
+"x": 36.5,
+"y": 16.5,
+"yaw": 90,
+"z": 1.55,
+"id": null
+},
+{
+"a": "painting_tempers",
+"x": 40.0,
+"y": 12.0,
+"yaw": 0,
+"z": 2.05,
+"id": null
+},
+{
+"a": "bench",
+"x": 40.0,
+"y": 18.4,
+"yaw": 180,
+"z": 0.0,
+"id": null
+},
+{
+"a": "stall_row",
+"x": 16.5,
+"y": 23.5,
+"yaw": 0,
+"z": 0.0,
+"id": "stall"
+},
+{
+"a": "sink_counter",
+"x": 12.5,
+"y": 27.0,
+"yaw": 90,
+"z": 0.0,
+"id": null
+},
+{
+"a": "conf_table",
+"x": 16.5,
+"y": 33.0,
+"yaw": 90,
+"z": 0.0,
+"id": "orient_table"
+},
+{
+"a": "chair_simple",
+"x": 14.6,
+"y": 32.0,
+"yaw": 90,
+"z": 0.0,
+"id": null
+},
+{
+"a": "chair_simple",
+"x": 14.6,
+"y": 34.0,
+"yaw": 90,
+"z": 0.0,
+"id": null
+},
+{
+"a": "chair_simple",
+"x": 18.4,
+"y": 33.0,
+"yaw": -90,
+"z": 0.0,
+"id": "seat_orient"
+},
+{
+"a": "painting_kier",
+"x": 16.0,
+"y": 28.5,
+"yaw": 0,
+"z": 1.55,
+"id": null
+},
+{
+"a": "printer3d",
+"x": 22.0,
+"y": 24.6,
+"yaw": 0,
+"z": 0.0,
+"id": "printer"
+},
+{
+"a": "drafting_table",
+"x": 24.5,
+"y": 28.5,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "drafting_table",
+"x": 27.0,
+"y": 28.5,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "drafting_table",
+"x": 24.5,
+"y": 31.5,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "drafting_table",
+"x": 27.0,
+"y": 31.5,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "exec_desk",
+"x": 32.5,
+"y": 26.0,
+"yaw": 0,
+"z": 0.0,
+"id": "burt_desk"
+},
+{
+"a": "shelf_art",
+"x": 20.0,
+"y": 30.5,
+"yaw": 90,
+"z": 0.0,
+"id": null
+},
+{
+"a": "sculpture",
+"x": 31.5,
+"y": 32.5,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "plant_tall",
+"x": 35.3,
+"y": 24.2,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "plant_tall",
+"x": 35.3,
+"y": 36.8,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "plant_tall",
+"x": 20.7,
+"y": 36.8,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "plant_small",
+"x": 29.8,
+"y": 24.0,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "painting_barbarity",
+"x": 32.5,
+"y": 23.5,
+"yaw": 0,
+"z": 1.55,
+"id": null
+},
+{
+"a": "painting_massacre",
+"x": 24.5,
+"y": 23.5,
+"yaw": 0,
+"z": 1.9,
+"id": null
+},
+{
+"a": "monitor_wall",
+"x": 44.5,
+"y": 23.5,
+"yaw": 0,
+"z": 0.0,
+"id": "cctv"
+},
+{
+"a": "security_desk",
+"x": 44.5,
+"y": 25.3,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "chair_office",
+"x": 44.5,
+"y": 26.5,
+"yaw": 180,
+"z": 0.0,
+"id": "seat_graner"
+},
+{
+"a": "lockers",
+"x": 36.5,
+"y": 26.5,
+"yaw": 90,
+"z": 0.0,
+"id": null
+},
+{
+"a": "keycard_box",
+"x": 45.6,
+"y": 25.3,
+"yaw": 0,
+"z": 0.76,
+"id": "keycard"
+},
+{
+"a": "plant_small",
+"x": 49.0,
+"y": 29.0,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "kitchen_counter",
+"x": 42.0,
+"y": 30.0,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "coffee_machine",
+"x": 40.4,
+"y": 30.3,
+"yaw": 0,
+"z": 0.92,
+"id": "coffee"
+},
+{
+"a": "fridge",
+"x": 47.6,
+"y": 30.4,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "kitchen_table",
+"x": 42.5,
+"y": 34.0,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "chair_simple",
+"x": 41.6,
+"y": 34.0,
+"yaw": 90,
+"z": 0.0,
+"id": null
+},
+{
+"a": "chair_simple",
+"x": 43.4,
+"y": 34.0,
+"yaw": -90,
+"z": 0.0,
+"id": null
+},
+{
+"a": "vending",
+"x": 36.5,
+"y": 35.5,
+"yaw": 90,
+"z": 0.0,
+"id": "vending"
+},
+{
+"a": "elevator",
+"x": 2.0,
+"y": 29.0,
+"yaw": 90,
+"z": 0.0,
+"id": "elevator_main"
+},
+{
+"a": "elevator",
+"x": 2.0,
+"y": 34.0,
+"yaw": 90,
+"z": 0.0,
+"id": null
+},
+{
+"a": "lumon_logo",
+"x": 5.25,
+"y": 26.0,
+"yaw": 0,
+"z": 1.2,
+"id": null
+},
+{
+"a": "bench",
+"x": 6.0,
+"y": 36.5,
+"yaw": 180,
+"z": 0.0,
+"id": null
+},
+{
+"a": "plant_tall",
+"x": 8.0,
+"y": 26.6,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "waffle_table",
+"x": 58.5,
+"y": 10.5,
+"yaw": 0,
+"z": 0.0,
+"id": "waffle_table"
+},
+{
+"a": "cabin_bed",
+"x": 62.3,
+"y": 7.4,
+"yaw": -90,
+"z": 0.0,
+"id": null
+},
+{
+"a": "fireplace",
+"x": 58.5,
+"y": 5.5,
+"yaw": 0,
+"z": 0.0,
+"id": "fireplace"
+},
+{
+"a": "painting_kier",
+"x": 55.0,
+"y": 5.5,
+"yaw": 0,
+"z": 1.55,
+"id": null
+},
+{
+"a": "candles",
+"x": 55.0,
+"y": 13.8,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "candles",
+"x": 62.5,
+"y": 13.8,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "red_elevator",
+"x": 61.0,
+"y": 20.0,
+"yaw": 0,
+"z": 0.0,
+"id": "red_elevator"
+},
+{
+"a": "painting_young_kier",
+"x": 24.0,
+"y": 20.0,
+"yaw": 0,
+"z": 1.55,
+"id": null
+},
+{
+"a": "painting_kier",
+"x": 46.5,
+"y": 20.0,
+"yaw": 0,
+"z": 1.55,
+"id": null
+},
+{
+"a": "painting_tempers",
+"x": 33.0,
+"y": 2.0,
+"yaw": 0,
+"z": 1.55,
+"id": null
+},
+{
+"a": "water_fountain",
+"x": 9.0,
+"y": 15.0,
+"yaw": 90,
+"z": 0.0,
+"id": null
+},
+{
+"a": "bench",
+"x": 9.3,
+"y": 27.5,
+"yaw": 90,
+"z": 0.0,
+"id": null
+},
+{
+"a": "fire_ext",
+"x": 50.0,
+"y": 31.0,
+"yaw": 90,
+"z": 0.0,
+"id": null
+},
+{
+"a": "trash_bin",
+"x": 52.6,
+"y": 22.6,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "plant_small",
+"x": 52.6,
+"y": 2.4,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "plant_small",
+"x": 9.4,
+"y": 2.4,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "painting_massacre",
+"x": 9.0,
+"y": 36.0,
+"yaw": 90,
+"z": 1.55,
+"id": null
+}
+],
+"markers": [
+{
+"k": "player_start",
+"x": 16.5,
+"y": 35.8,
+"yaw": 180
+},
+{
+"k": "lobby_arrive",
+"x": 4.5,
+"y": 29.0,
+"yaw": 90
+},
+{
+"k": "red_arrive",
+"x": 61.0,
+"y": 21.5,
+"yaw": 0
+},
+{
+"k": "npc_milchick",
+"x": 30.0,
+"y": 21.5,
+"yaw": 0
+},
+{
+"k": "npc_cobel",
+"x": 16.0,
+"y": 13.4,
+"yaw": 0
+},
+{
+"k": "npc_burt",
+"x": 32.5,
+"y": 27.3,
+"yaw": 180
+},
+{
+"k": "npc_casey",
+"x": 41.0,
+"y": 8.6,
+"yaw": 90
+},
+{
+"k": "npc_graner",
+"x": 44.5,
+"y": 26.5,
+"yaw": 180
+},
+{
+"k": "helly_table",
+"x": 16.5,
+"y": 33.0,
+"yaw": 0
+},
+{
+"k": "map_piece",
+"x": 50.6,
+"y": 40.4,
+"yaw": 0,
+"id": "map1"
+},
+{
+"k": "map_piece",
+"x": 63.4,
+"y": 22.4,
+"yaw": 0,
+"id": "map2"
+},
+{
+"k": "map_piece",
+"x": 19.0,
+"y": 36.9,
+"yaw": 0,
+"id": "map3"
+},
+{
+"k": "map_piece",
+"x": 9.6,
+"y": 2.6,
+"yaw": 0,
+"id": "map4"
+}
+],
+"doors": [
+{
+"id": "d_break",
+"x": 12.25,
+"y": 8.75,
+"w": 1.5,
+"axis": "y",
+"lock": null
+},
+{
+"id": "d_cobel",
+"x": 15.75,
+"y": 19.75,
+"w": 1.5,
+"axis": "x",
+"lock": null
+},
+{
+"id": "d_mdr",
+"x": 28.0,
+"y": 19.75,
+"w": 2,
+"axis": "x",
+"lock": null
+},
+{
+"id": "d_wellness",
+"x": 49.75,
+"y": 8.75,
+"w": 1.5,
+"axis": "y",
+"lock": null
+},
+{
+"id": "d_perpetual",
+"x": 42.75,
+"y": 19.75,
+"w": 1.5,
+"axis": "x",
+"lock": null
+},
+{
+"id": "d_restroom",
+"x": 12.25,
+"y": 25.75,
+"w": 1.5,
+"axis": "y",
+"lock": null
+},
+{
+"id": "d_orientation",
+"x": 12.25,
+"y": 32.75,
+"w": 1.5,
+"axis": "y",
+"lock": null
+},
+{
+"id": "d_od",
+"x": 28.0,
+"y": 23.25,
+"w": 2,
+"axis": "x",
+"lock": "od"
+},
+{
+"id": "d_security",
+"x": 42.75,
+"y": 23.25,
+"w": 1.5,
+"axis": "x",
+"lock": null
+},
+{
+"id": "d_kitchen",
+"x": 49.75,
+"y": 33.75,
+"w": 1.5,
+"axis": "y",
+"lock": null
+},
+{
+"id": "d_lobby",
+"x": 8.75,
+"y": 31.5,
+"w": 2.0,
+"axis": "y",
+"lock": null
+},
+{
+"id": "d_waffle",
+"x": 53.25,
+"y": 9.75,
+"w": 1.5,
+"axis": "y",
+"lock": "waffle"
+}
+],
+"routes": {
+"milchick": [
+[
+14,
+21.5
+],
+[
+48,
+21.5
+],
+[
+51.5,
+21.5
+],
+[
+51.5,
+39.5
+],
+[
+10.5,
+39.5
+],
+[
+10.5,
+21.5
+]
+],
+"graner": [
+[
+51.5,
+3.5
+],
+[
+51.5,
+30.0
+],
+[
+51.5,
+3.5
+],
+[
+10.5,
+3.5
+],
+[
+10.5,
+18.0
+],
+[
+10.5,
+3.5
+]
+]
+},
+"signs": [
+{
+"key": "mdr",
+"x": 30.2,
+"y": 20.0,
+"yaw": 0
+},
+{
+"key": "od",
+"x": 30.2,
+"y": 23.0,
+"yaw": 180
+},
+{
+"key": "break",
+"x": 12.0,
+"y": 7.4,
+"yaw": -90
+},
+{
+"key": "cobel",
+"x": 17.6,
+"y": 20.0,
+"yaw": 0
+},
+{
+"key": "wellness",
+"x": 50.0,
+"y": 7.4,
+"yaw": 90
+},
+{
+"key": "perpetual",
+"x": 44.7,
+"y": 20.0,
+"yaw": 0
+},
+{
+"key": "restroom",
+"x": 12.0,
+"y": 24.4,
+"yaw": -90
+},
+{
+"key": "orientation",
+"x": 12.0,
+"y": 31.4,
+"yaw": -90
+},
+{
+"key": "security",
+"x": 44.7,
+"y": 23.0,
+"yaw": 180
+},
+{
+"key": "kitchen",
+"x": 50.0,
+"y": 32.4,
+"yaw": 90
+},
+{
+"key": "waffle",
+"x": 53.0,
+"y": 8.4,
+"yaw": 90
+}
+],
+"map": {
+"rect": [
+0,
+0,
+66,
+43
+]
+}
+}

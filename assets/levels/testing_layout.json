@@ -1,0 +1,558 @@
+{
+"name": "testing",
+"cell": 0.5,
+"w": 92,
+"h": 56,
+"wall_h": 2.7,
+"door_h": 2.25,
+"grid": [
+"                                                                                            ",
+"                                                                                            ",
+"                                                                                            ",
+"                       ##############################  ##############################       ",
+"                       #............................#  #............................#       ",
+"                       #.........................xx.#  #.xxxx..................xxxx.#       ",
+"                       #...xx.x..................xx.#  #............................#       ",
+"                       #............................#  #............................#       ",
+"                       #............................#  #..........xxxxxxxx..........#       ",
+"                       #............................#  #..........xxxxxxxx..........#       ",
+"                       #............................#  #..........xxxxxxxx..........#       ",
+"                       #............................#  #..........xxxxxxxx..........#       ",
+"                       #............................#  #..........xxxxxxxx..........#       ",
+"                       #............................#  #..........xxxxxxxx..........#       ",
+"                       #............................#  #..........xxxxxxxx..........#       ",
+"                       #............................#  #..........xxxxxxxx..........#       ",
+"                       #............................#  #............................#       ",
+"                       #............................#  #............................#       ",
+"                       #............................#  #............................#       ",
+"################       #............................#  #xx..........................#       ",
+"#..............#       #.xx.........................#  #xx..........................#       ",
+"#..............#       #.xx.....................xx..#  #............................#       ",
+"#..............#       #...x........................#  #............................#       ",
+"#..............#       #............................#  #............................#       ",
+"#..............#####################DDD#############################DDD##################   ",
+"#..............#........................................................................#   ",
+"#..............D........................................................................#   ",
+"#..............D........................................................................#   ",
+"#..............D........................................................................#   ",
+"#..............D........................................................................#   ",
+"#..............#........................................................................#   ",
+"#..............#####################DDD#############################DDD##################   ",
+"#..............#       #....xx...xx...xx...xx...xx..#  #.........xx......xx.........#       ",
+"#..............#       #....xx...xx...xx...xx...xx..#  #.........xx......xx.........#       ",
+"#..............#       #............................#  #............................#       ",
+"#..............#       #............................#  #............................#       ",
+"################       #............................#  #............................#       ",
+"                       #............................#  #............................#       ",
+"                       #............................#  #............................#       ",
+"                       #............................#  #............................#       ",
+"                       #............................#  #............................#       ",
+"                       #............................#  #............................#       ",
+"                       #............................#  #............................#       ",
+"                       #x...........................#  #............................#       ",
+"                       #x...........................#  #...........xxxxxx...........#       ",
+"                       #............................#  #...........xxxxxx...........#       ",
+"                       #............................#  #............................#       ",
+"                       #............................#  #............................#       ",
+"                       #..........................xx#  #............................#       ",
+"                       #..........................xx#  #............................#       ",
+"                       #............................#  #............................#       ",
+"                       #............................#  #............................#       ",
+"                       ##############################  ##############################       ",
+"                                                                                            ",
+"                                                                                            ",
+"                                                                                            "
+],
+"room_ids": [
+"hall",
+"t_lobby",
+"goats",
+"tent",
+"cryo",
+"otc"
+],
+"room_rows": [
+"                                                                                            ",
+"                                                                                            ",
+"                                                                                            ",
+"                                                                                            ",
+"                        CCCCCCCCCCCCCCCCCCCCCCCCCCCC    DDDDDDDDDDDDDDDDDDDDDDDDDDDD        ",
+"                        CCCCCCCCCCCCCCCCCCCCCCCCCCCC    DDDDDDDDDDDDDDDDDDDDDDDDDDDD        ",
+"                        CCCCCCCCCCCCCCCCCCCCCCCCCCCC    DDDDDDDDDDDDDDDDDDDDDDDDDDDD        ",
+"                        CCCCCCCCCCCCCCCCCCCCCCCCCCCC    DDDDDDDDDDDDDDDDDDDDDDDDDDDD        ",
+"                        CCCCCCCCCCCCCCCCCCCCCCCCCCCC    DDDDDDDDDDDDDDDDDDDDDDDDDDDD        ",
+"                        CCCCCCCCCCCCCCCCCCCCCCCCCCCC    DDDDDDDDDDDDDDDDDDDDDDDDDDDD        ",
+"                        CCCCCCCCCCCCCCCCCCCCCCCCCCCC    DDDDDDDDDDDDDDDDDDDDDDDDDDDD        ",
+"                        CCCCCCCCCCCCCCCCCCCCCCCCCCCC    DDDDDDDDDDDDDDDDDDDDDDDDDDDD        ",
+"                        CCCCCCCCCCCCCCCCCCCCCCCCCCCC    DDDDDDDDDDDDDDDDDDDDDDDDDDDD        ",
+"                        CCCCCCCCCCCCCCCCCCCCCCCCCCCC    DDDDDDDDDDDDDDDDDDDDDDDDDDDD        ",
+"                        CCCCCCCCCCCCCCCCCCCCCCCCCCCC    DDDDDDDDDDDDDDDDDDDDDDDDDDDD        ",
+"                        CCCCCCCCCCCCCCCCCCCCCCCCCCCC    DDDDDDDDDDDDDDDDDDDDDDDDDDDD        ",
+"                        CCCCCCCCCCCCCCCCCCCCCCCCCCCC    DDDDDDDDDDDDDDDDDDDDDDDDDDDD        ",
+"                        CCCCCCCCCCCCCCCCCCCCCCCCCCCC    DDDDDDDDDDDDDDDDDDDDDDDDDDDD        ",
+"                        CCCCCCCCCCCCCCCCCCCCCCCCCCCC    DDDDDDDDDDDDDDDDDDDDDDDDDDDD        ",
+"                        CCCCCCCCCCCCCCCCCCCCCCCCCCCC    DDDDDDDDDDDDDDDDDDDDDDDDDDDD        ",
+" BBBBBBBBBBBBBB         CCCCCCCCCCCCCCCCCCCCCCCCCCCC    DDDDDDDDDDDDDDDDDDDDDDDDDDDD        ",
+" BBBBBBBBBBBBBB         CCCCCCCCCCCCCCCCCCCCCCCCCCCC    DDDDDDDDDDDDDDDDDDDDDDDDDDDD        ",
+" BBBBBBBBBBBBBB         CCCCCCCCCCCCCCCCCCCCCCCCCCCC    DDDDDDDDDDDDDDDDDDDDDDDDDDDD        ",
+" BBBBBBBBBBBBBB         CCCCCCCCCCCCCCCCCCCCCCCCCCCC    DDDDDDDDDDDDDDDDDDDDDDDDDDDD        ",
+" BBBBBBBBBBBBBB                     AAA                             AAA                     ",
+" BBBBBBBBBBBBBB AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA    ",
+" BBBBBBBBBBBBBBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA    ",
+" BBBBBBBBBBBBBBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA    ",
+" BBBBBBBBBBBBBBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA    ",
+" BBBBBBBBBBBBBBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA    ",
+" BBBBBBBBBBBBBB AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA    ",
+" BBBBBBBBBBBBBB                     AAA                             AAA                     ",
+" BBBBBBBBBBBBBB         EEEEEEEEEEEEEEEEEEEEEEEEEEEE    FFFFFFFFFFFFFFFFFFFFFFFFFFFF        ",
+" BBBBBBBBBBBBBB         EEEEEEEEEEEEEEEEEEEEEEEEEEEE    FFFFFFFFFFFFFFFFFFFFFFFFFFFF        ",
+" BBBBBBBBBBBBBB         EEEEEEEEEEEEEEEEEEEEEEEEEEEE    FFFFFFFFFFFFFFFFFFFFFFFFFFFF        ",
+" BBBBBBBBBBBBBB         EEEEEEEEEEEEEEEEEEEEEEEEEEEE    FFFFFFFFFFFFFFFFFFFFFFFFFFFF        ",
+"                        EEEEEEEEEEEEEEEEEEEEEEEEEEEE    FFFFFFFFFFFFFFFFFFFFFFFFFFFF        ",
+"                        EEEEEEEEEEEEEEEEEEEEEEEEEEEE    FFFFFFFFFFFFFFFFFFFFFFFFFFFF        ",
+"                        EEEEEEEEEEEEEEEEEEEEEEEEEEEE    FFFFFFFFFFFFFFFFFFFFFFFFFFFF        ",
+"                        EEEEEEEEEEEEEEEEEEEEEEEEEEEE    FFFFFFFFFFFFFFFFFFFFFFFFFFFF        ",
+"                        EEEEEEEEEEEEEEEEEEEEEEEEEEEE    FFFFFFFFFFFFFFFFFFFFFFFFFFFF        ",
+"                        EEEEEEEEEEEEEEEEEEEEEEEEEEEE    FFFFFFFFFFFFFFFFFFFFFFFFFFFF        ",
+"                        EEEEEEEEEEEEEEEEEEEEEEEEEEEE    FFFFFFFFFFFFFFFFFFFFFFFFFFFF        ",
+"                        EEEEEEEEEEEEEEEEEEEEEEEEEEEE    FFFFFFFFFFFFFFFFFFFFFFFFFFFF        ",
+"                        EEEEEEEEEEEEEEEEEEEEEEEEEEEE    FFFFFFFFFFFFFFFFFFFFFFFFFFFF        ",
+"                        EEEEEEEEEEEEEEEEEEEEEEEEEEEE    FFFFFFFFFFFFFFFFFFFFFFFFFFFF        ",
+"                        EEEEEEEEEEEEEEEEEEEEEEEEEEEE    FFFFFFFFFFFFFFFFFFFFFFFFFFFF        ",
+"                        EEEEEEEEEEEEEEEEEEEEEEEEEEEE    FFFFFFFFFFFFFFFFFFFFFFFFFFFF        ",
+"                        EEEEEEEEEEEEEEEEEEEEEEEEEEEE    FFFFFFFFFFFFFFFFFFFFFFFFFFFF        ",
+"                        EEEEEEEEEEEEEEEEEEEEEEEEEEEE    FFFFFFFFFFFFFFFFFFFFFFFFFFFF        ",
+"                        EEEEEEEEEEEEEEEEEEEEEEEEEEEE    FFFFFFFFFFFFFFFFFFFFFFFFFFFF        ",
+"                        EEEEEEEEEEEEEEEEEEEEEEEEEEEE    FFFFFFFFFFFFFFFFFFFFFFFFFFFF        ",
+"                                                                                            ",
+"                                                                                            ",
+"                                                                                            ",
+"                                                                                            "
+],
+"rooms": [
+{
+"id": "hall",
+"rects": [
+[
+8,
+12.5,
+44,
+15.5
+]
+],
+"floor": "testing_floor",
+"wall": "wall_testing"
+},
+{
+"id": "t_lobby",
+"rects": [
+[
+0.5,
+10,
+7.5,
+18
+]
+],
+"floor": "carpet_red",
+"wall": "wall_testing"
+},
+{
+"id": "goats",
+"rects": [
+[
+12,
+2,
+26,
+12
+]
+],
+"floor": "grass",
+"wall": "wall_green"
+},
+{
+"id": "tent",
+"rects": [
+[
+28,
+2,
+42,
+12
+]
+],
+"floor": "concrete",
+"wall": "wall_white"
+},
+{
+"id": "cryo",
+"rects": [
+[
+12,
+16,
+26,
+26
+]
+],
+"floor": "testing_floor",
+"wall": "wall_grey"
+},
+{
+"id": "otc",
+"rects": [
+[
+28,
+16,
+42,
+26
+]
+],
+"floor": "concrete",
+"wall": "wall_testing"
+}
+],
+"props": [
+{
+"a": "red_elevator",
+"x": 0.5,
+"y": 14.0,
+"yaw": 90,
+"z": 0.0,
+"id": "red_elevator_up"
+},
+{
+"a": "bench",
+"x": 4.0,
+"y": 17.5,
+"yaw": 180,
+"z": 0.0,
+"id": null
+},
+{
+"a": "lumon_logo",
+"x": 4.0,
+"y": 10.0,
+"yaw": 0,
+"z": 1.2,
+"id": null
+},
+{
+"a": "goat_fence",
+"x": 19.0,
+"y": 6.5,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "hay_bale",
+"x": 14.0,
+"y": 3.2,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "hay_bale",
+"x": 15.3,
+"y": 3.0,
+"yaw": 20,
+"z": 0.0,
+"id": null
+},
+{
+"a": "hay_bale",
+"x": 24.6,
+"y": 10.6,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "trough",
+"x": 21.5,
+"y": 4.0,
+"yaw": 0,
+"z": 0.0,
+"id": "trough"
+},
+{
+"a": "tree_small",
+"x": 13.0,
+"y": 10.5,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "tree_small",
+"x": 25.0,
+"y": 3.0,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "milk_crate",
+"x": 13.6,
+"y": 11.2,
+"yaw": 0,
+"z": 0.0,
+"id": "milk"
+},
+{
+"a": "tent",
+"x": 35.0,
+"y": 6.0,
+"yaw": 0,
+"z": 0.0,
+"id": "tent"
+},
+{
+"a": "lab_bench",
+"x": 29.5,
+"y": 2.6,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "lab_bench",
+"x": 40.5,
+"y": 2.6,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "server_rack",
+"x": 28.4,
+"y": 10.0,
+"yaw": 90,
+"z": 0.0,
+"id": null
+},
+{
+"a": "cryo_pod",
+"x": 14.5,
+"y": 16.4,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "cryo_pod",
+"x": 17.0,
+"y": 16.4,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "cryo_pod",
+"x": 19.5,
+"y": 16.4,
+"yaw": 0,
+"z": 0.0,
+"id": "cryo_pod"
+},
+{
+"a": "cryo_pod",
+"x": 22.0,
+"y": 16.4,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "cryo_pod",
+"x": 24.5,
+"y": 16.4,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "cryo_console",
+"x": 12.0,
+"y": 22.0,
+"yaw": 90,
+"z": 0.0,
+"id": "cryo_console"
+},
+{
+"a": "server_rack",
+"x": 25.6,
+"y": 24.5,
+"yaw": -90,
+"z": 0.0,
+"id": null
+},
+{
+"a": "otc_switch",
+"x": 29.5,
+"y": 16.0,
+"yaw": 0,
+"z": 0.0,
+"id": "otc_a"
+},
+{
+"a": "otc_switch",
+"x": 40.5,
+"y": 16.0,
+"yaw": 0,
+"z": 0.0,
+"id": "otc_b"
+},
+{
+"a": "server_rack",
+"x": 33.0,
+"y": 16.4,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "server_rack",
+"x": 37.0,
+"y": 16.4,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "security_desk",
+"x": 35.0,
+"y": 22.5,
+"yaw": 0,
+"z": 0.0,
+"id": null
+},
+{
+"a": "monitor_wall",
+"x": 35.0,
+"y": 26.0,
+"yaw": 180,
+"z": 0.0,
+"id": null
+}
+],
+"markers": [
+{
+"k": "red_arrive",
+"x": 2.5,
+"y": 14.0,
+"yaw": 90
+},
+{
+"k": "npc_keeper",
+"x": 19.0,
+"y": 10.6,
+"yaw": 0
+},
+{
+"k": "goat",
+"x": 16.0,
+"y": 5.0,
+"yaw": 0,
+"id": "goat1"
+},
+{
+"k": "goat",
+"x": 20.0,
+"y": 7.5,
+"yaw": 90,
+"id": "goat2"
+},
+{
+"k": "goat",
+"x": 22.5,
+"y": 5.5,
+"yaw": 180,
+"id": "goat3"
+},
+{
+"k": "pen",
+"x": 19.0,
+"y": 6.5,
+"yaw": 0,
+"w": 9.0,
+"h": 6.0
+}
+],
+"doors": [
+{
+"id": "d_tlobby",
+"x": 7.75,
+"y": 14.0,
+"w": 2,
+"axis": "y",
+"lock": null
+},
+{
+"id": "d_goats",
+"x": 18.75,
+"y": 12.25,
+"w": 1.5,
+"axis": "x",
+"lock": null
+},
+{
+"id": "d_tent",
+"x": 34.75,
+"y": 12.25,
+"w": 1.5,
+"axis": "x",
+"lock": null
+},
+{
+"id": "d_cryo",
+"x": 18.75,
+"y": 15.75,
+"w": 1.5,
+"axis": "x",
+"lock": "cryo"
+},
+{
+"id": "d_otc",
+"x": 34.75,
+"y": 15.75,
+"w": 1.5,
+"axis": "x",
+"lock": "otc"
+}
+],
+"routes": {},
+"signs": [
+{
+"key": "goats",
+"x": 20.3,
+"y": 12.0,
+"yaw": 0
+},
+{
+"key": "tent",
+"x": 36.3,
+"y": 12.0,
+"yaw": 0
+},
+{
+"key": "cryo",
+"x": 20.3,
+"y": 15.5,
+"yaw": 180
+},
+{
+"key": "otc",
+"x": 36.3,
+"y": 15.5,
+"yaw": 180
+}
+],
+"map": {
+"rect": [
+0,
+0,
+46,
+28
+]
+}
+}

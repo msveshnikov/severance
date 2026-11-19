@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+        />
+        <title>Severance (Lumon Office) - Macrodata Refinement &amp; Testing Floor Game</title>
+
+        <!-- Primary Meta Tags -->
+        <meta name="title" content="Severance (Lumon Office) - Macrodata Refinement &amp; Testing Floor Game" />
+        <meta
+            name="description"
+            content="Play the immersive Severance browser game! Refine scary numbers in MDR, explore Optics &amp; Design and Perpetual Wing, ride the Red-Marked Elevator to the Testing Floor, and activate the Overtime Contingency."
+        />
+        <meta
+            name="keywords"
+            content="Severance, Severance game, Lumon Industries, Macrodata Refinement, MDR, Kier Eagan, Mark Scout, Helly R, Dylan George, Irving Bailiff, Burt Goodman, Ms. Casey, Break Room, Testing Floor, Overtime Contingency, OTC, Waffle Party, Defiant Jazz, pixel game, retro browser game"
+        />
+        <meta name="author" content="Lumon Industries / Severance Project" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <meta name="theme-color" content="#0b1512" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="Lumon Severance" />
+        <link rel="canonical" href="https://mvpgen.com/severance" />
+
+        <!-- Favicon / Icons -->
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Lumon Industries - Severance Game" />
+        <meta property="og:url" content="https://mvpgen.com/severance" />
+        <meta property="og:title" content="Severance (Lumon Office) - Macrodata Refinement Browser Game" />
+        <meta
+            property="og:description"
+            content="Refine scary numbers in MDR, visit Burt in O&amp;D, study Kier in the Perpetual Wing, take the Red-Marked Elevator to Sub-Level 2, and activate the Overtime Contingency!"
+        />
+        <meta property="og:image" content="/assets/art_four_tempers.jpg" />
+        <meta property="og:image:alt" content="The Four Tempers - Severance Lumon Game Art" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://mvpgen.com/severance" />
+        <meta name="twitter:title" content="Severance (Lumon Office) - Macrodata Refinement Browser Game" />
+        <meta
+            name="twitter:description"
+            content="Step onto the severed floor. Refine macrodata, explore Lumon departments, meet Ms. Casey on Sub-Level 2, and trigger the Overtime Contingency!"
+        />
+        <meta name="twitter:image" content="/assets/art_four_tempers.jpg" />
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-131M8E1FZ2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-131M8E1FZ2");
+        </script>
+
+        <!-- JSON-LD Structured Data for Google Search -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "VideoGame",
+                "name": "Severance: Lumon Office & Testing Floor Game",
+                "description": "An interactive pixel art retro simulation of Lumon Industries' severed floor from Severance. Features Macrodata Refinement, Optics & Design 3D printing, Perpetual Wing, Break Room, and Sub-Level 2 Testing Floor.",
+                "genre": ["Adventure", "Simulation", "Puzzle", "Retro"],
+                "gamePlatform": ["Web Browser", "Mobile Browser", "Desktop"],
+                "operatingSystem": "Any (Browser-based)",
+                "applicationCategory": "Game",
+                "inLanguage": "en",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                }
+            }
+        </script>
+
+        <!-- Preconnect and Font Optimization -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;family=VT323&amp;family=Inter:wght@400;600;800&amp;display=swap"
+            rel="stylesheet"
+        />
+      <script type="module" crossorigin src="/assets/index-DUHt61Ya.js"></script>
+      <link rel="modulepreload" crossorigin href="/assets/audio-TCAx7-k2.js">
+      <link rel="stylesheet" crossorigin href="/assets/index-axTqk7Vj.css">
+    </head>
+    <body class="crt-filter">
+        <!-- Game Container -->
+        <div id="app">
+            <!-- Main Canvas -->
+            <canvas id="gameCanvas"></canvas>
+
+            <!-- Top Lumon Bar UI -->
+            <header id="lumonHeader">
+                <div class="header-left">
+                    <div class="lumon-badge">
+                        <span class="lumon-logo-icon">❖</span>
+                        <span class="lumon-title">LUMON INDUSTRIES</span>
+                    </div>
+                    <div id="currentFloorTag" class="dept-tag">FLOOR 1: MDR, O&D & PERPETUAL WING</div>
+                </div>
+
+                <div class="header-right">
+                    <!-- MDR Quota Tracker -->
+                    <div class="quota-container" title="Macrodata Refinement Quota">
+                        <div id="quotaLabel" class="quota-label">MDR QUOTA</div>
+                        <div class="quota-bar-outer">
+                            <div id="quotaBarInner" class="quota-bar-inner" style="width: 0%"></div>
+                        </div>
+                        <div id="quotaText" class="quota-text">0%</div>
+                    </div>
+
+                    <!-- Active Character Indicator -->
+                    <button id="characterSwitchBtn" class="char-switch-btn" aria-label="Switch Character">
+                        <div id="activeAvatar" class="avatar mark-avatar"></div>
+                        <div class="char-info">
+                            <span id="charName" class="char-name">MARK S.</span>
+                            <span id="charRole" class="char-role">SENIOR REFINER</span>
+                        </div>
+                        <span class="switch-icon">⇄</span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Quest Tracker Widget -->
+            <div id="questWidget" class="quest-widget" title="Click to view all 32 Lumon Directives">
+                <div class="quest-title-bar">
+                    <span class="quest-icon">📋</span>
+                    <span id="questTitle" class="quest-header">CURRENT DIRECTIVE</span>
+                    <button id="openDirectivesBtn" class="directives-log-btn" title="Open 32 Directives Archive">ARCHIVE (32)</button>
+                </div>
+                <div id="questDescription" class="quest-desc">
+                    Report to your MDR terminal and refine scary numbers.
+                </div>
+            </div>
+
+            <!-- Notification Toast -->
+            <div id="toast" class="toast hidden">
+                <span id="toastMsg">Directive Updated</span>
+            </div>
+
+            <!-- Interactive Prompt Hover Tooltip -->
+            <div id="interactPrompt" class="interact-prompt hidden">
+                <span class="key-badge">E / TAP</span>
+                <span id="interactLabel">Use CRT Terminal</span>
+            </div>
+
+            <!-- Mobile Touch Overlay Controls -->
+            <div id="touchControls" class="touch-controls">
+                <!-- Virtual D-Pad / Joystick -->
+                <div id="dpad" class="dpad-container">
+                    <div class="dpad-btn dpad-up" data-dir="up">▲</div>
+                    <div class="dpad-btn dpad-down" data-dir="down">▼</div>
+                    <div class="dpad-btn dpad-left" data-dir="left">◀</div>
+                    <div class="dpad-btn dpad-right" data-dir="right">▶</div>
+                    <div class="dpad-center"></div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-btn-group">
+                    <button id="touchInteractBtn" class="touch-btn action-btn">
+                        <span class="btn-icon">💬</span>
+                        <span class="btn-lbl">INTERACT</span>
+                    </button>
+                    <button id="touchSwitchBtn" class="touch-btn switch-btn">
+                        <span class="btn-icon">⇄</span>
+                        <span class="btn-lbl">SWAP</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- MODAL: MDR CRT Terminal Mini-Game -->
+            <div id="mdrModal" class="modal hidden">
+                <div class="crt-screen">
+                    <div class="crt-scanline"></div>
+                    <div class="crt-header">
+                        <span>LUMON OS v4.09 - MACRODATA REFINEMENT</span>
+                        <button id="closeMdrBtn" class="crt-close-btn">[ X ] EXIT</button>
+                    </div>
+
+                    <div class="mdr-file-info">
+                        <span>FILE: <strong id="mdrFileName">Dillingham_09.dat</strong></span>
+                        <span>PROGRESS: <strong id="mdrFileProgress">0%</strong></span>
+                    </div>
+
+                    <div class="mdr-grid-container">
+                        <p class="mdr-instructions">SELECT SCARY / TEMPERAMENTAL NUMBERS & REFINE INTO BINS BELOW:</p>
+                        <div id="mdrGrid" class="mdr-grid">
+                            <!-- Dynamic numbers generated via JS -->
+                        </div>
+                    </div>
+
+                    <!-- Bins -->
+                    <div class="mdr-bins">
+                        <button class="mdr-bin-btn" data-bin="WO">
+                            <span class="bin-code">01 [WO]</span>
+                            <span class="bin-name">WOE</span>
+                        </button>
+                        <button class="mdr-bin-btn" data-bin="FC">
+                            <span class="bin-code">02 [FC]</span>
+                            <span class="bin-name">FROLIC</span>
+                        </button>
+                        <button class="mdr-bin-btn" data-bin="DR">
+                            <span class="bin-code">03 [DR]</span>
+                            <span class="bin-name">DREAD</span>
+                        </button>
+                        <button class="mdr-bin-btn" data-bin="MA">
+                            <span class="bin-code">04 [MA]</span>
+                            <span class="bin-name">MALICE</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODAL: Optics & Design (O&D) 3D Printer Crafting -->
+            <div id="odModal" class="modal hidden">
+                <div class="crt-screen od-theme">
+                    <div class="crt-scanline"></div>
+                    <div class="crt-header">
+                        <span>OPTICS & DESIGN - 3D ART & EQUIPMENT PRINTER</span>
+                        <button id="closeOdBtn" class="crt-close-btn">[ X ] EXIT</button>
+                    </div>
+
+                    <div class="od-body">
+                        <div class="od-blueprint-box">
+                            <h3>SELECT BLUEPRINT (DYLAN G. OVERRIDE):</h3>
+                            <div class="blueprint-options">
+                                <button class="bp-btn active" data-item="otc_key">
+                                    <span>🗝️ Overtime Contingency Master Key</span>
+                                </button>
+                                <button class="bp-btn" data-item="can">
+                                    <span>🫖 Kier Ceremonial Watering Can</span>
+                                </button>
+                                <button class="bp-btn" data-item="hatchet">
+                                    <span>🪓 O&D Safety Hatchet</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="od-craft-controls">
+                            <p>CALIBRATE 3D PRINTING TEMPERATURE (TARGET: 75°C):</p>
+                            <input type="range" id="tempSlider" min="0" max="100" value="30" class="temp-slider" />
+                            <div class="temp-readout">CURRENT TEMP: <span id="tempVal">30°C</span></div>
+                            <button id="craftPrintBtn" class="craft-btn">START 3D PRINT (DYLAN)</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODAL: Ricken's Contraband Book "The You You Are" (Perpetual Wing) -->
+            <div id="rickenModal" class="modal hidden">
+                <div class="crt-screen ricken-theme">
+                    <div class="crt-header">
+                        <span>CONTRABAND LITERATURE - "THE YOU YOU ARE" BY RICKEN LAZLO HALE</span>
+                        <button id="closeRickenBtn" class="crt-close-btn">[ X ] CLOSE BOOK</button>
+                    </div>
+                    <div class="break-room-body">
+                        <div class="milchick-portrait">
+                            <div class="npc-badge" style="background: #502010; border-color: #e06030">RICKEN HALE</div>
+                            <p>"If you are a worker, are you not also the work?"</p>
+                        </div>
+
+                        <div
+                            class="statement-box"
+                            style="border-color: #e06030; font-family: &quot;Inter&quot;, sans-serif"
+                        >
+                            <p id="rickenExcerptText">
+                                "Bullies are nothing and nobody. At the center of 'industry' is 'dust'. A good leader is
+                                like a father, but also a mother, and maybe a cousin who knows karate."
+                            </p>
+                        </div>
+
+                        <button
+                            id="readRickenBtn"
+                            class="recite-btn"
+                            style="background: linear-gradient(135deg, #e06030, #902510); color: white"
+                        >
+                            📖 READ REVOLUTIONARY PASSAGE (TAP)
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODAL: Doug Graner's CCTV Security Matrix (Security Hub) -->
+            <div id="cctvModal" class="modal hidden">
+                <div class="crt-screen cctv-theme">
+                    <div class="crt-header">
+                        <span>SECURITY COMMAND - CCTV FEED OVERRIDE (DOUG GRANER)</span>
+                        <button id="closeCctvBtn" class="crt-close-btn">[ X ] EXIT</button>
+                    </div>
+                    <div class="break-room-body">
+                        <div class="statement-box" style="border-color: #ff3333">
+                            <p>
+                                📹 CAM-01: MDR POD [NORMAL] | CAM-02: O&D WING [NORMAL] | CAM-03: PERPETUAL WING
+                                [SUSPICIOUS]
+                            </p>
+                        </div>
+                        <button
+                            id="blackoutCamerasBtn"
+                            class="recite-btn"
+                            style="background: linear-gradient(135deg, #ff3333, #801010); color: white"
+                        >
+                            ⚡ INITIATE SURVEILLANCE BLACKOUT (HACK)
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODAL: Ms. Casey Wellness Check Session (Testing Floor) -->
+            <div id="wellnessModal" class="modal hidden">
+                <div class="crt-screen wellness-theme">
+                    <div class="crt-header">
+                        <span>WELLNESS CENTER - MS. CASEY SESSION</span>
+                        <button id="closeWellnessBtn" class="crt-close-btn">[ X ] EXIT</button>
+                    </div>
+                    <div class="break-room-body">
+                        <div class="milchick-portrait">
+                            <div class="npc-badge" style="background: #2a4050; border-color: #50a0d0">MS. CASEY</div>
+                            <p id="caseySpeech">"Your outie is generous and kind. Please enjoy all facts equally."</p>
+                        </div>
+
+                        <div class="statement-box" style="border-color: #50a0d0">
+                            <p id="wellnessFactText">"Your outie is skilled at kissing with his eyes closed."</p>
+                        </div>
+
+                        <div class="meter-box">
+                            <div class="meter-label">CALMNESS STABILITY METER</div>
+                            <div class="meter-bar-outer">
+                                <div
+                                    id="calmMeter"
+                                    class="meter-bar-inner"
+                                    style="width: 25%; background: linear-gradient(90deg, #3080b0, #50d0ff)"
+                                ></div>
+                            </div>
+                        </div>
+
+                        <button
+                            id="listenFactBtn"
+                            class="recite-btn"
+                            style="background: linear-gradient(135deg, #3080b0, #154560); color: white"
+                        >
+                            ENJOY FACT EQUALLY (TAP / SPACE)
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODAL: Mammalian Nutrition (Baby Goats) Feeding (Testing Floor) -->
+            <div id="goatModal" class="modal hidden">
+                <div class="crt-screen goat-theme">
+                    <div class="crt-header">
+                        <span>DEPARTMENT OF MAMMALIAN NUTRITION - BABY GOAT NURSERY</span>
+                        <button id="closeGoatBtn" class="crt-close-btn">[ X ] EXIT</button>
+                    </div>
+                    <div class="break-room-body">
+                        <div class="milchick-portrait">
+                            <div class="npc-badge" style="background: #4a3820; border-color: #d0a050">
+                                GOAT NURSERY KEEPER
+                            </div>
+                            <p>"They aren't ready yet! But you may give them their bottle."</p>
+                        </div>
+
+                        <div class="statement-box" style="border-color: #d0a050">
+                            <p id="goatStatusText">
+                                🐐 3 baby goats are waiting eagerly for their Lumon formula milk bottles!
+                            </p>
+                        </div>
+
+                        <button
+                            id="feedGoatBtn"
+                            class="recite-btn"
+                            style="background: linear-gradient(135deg, #d0a050, #805520); color: #0b1512"
+                        >
+                            🍼 FEED BABY GOATS MILK BOTTLE
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODAL: Break Room Compunction Challenge -->
+            <div id="breakRoomModal" class="modal hidden">
+                <div class="crt-screen break-room-theme">
+                    <div class="crt-header">
+                        <span>THE BREAK ROOM - STATEMENT OF COMPUNCTION</span>
+                        <button id="closeBreakRoomBtn" class="crt-close-btn">[ X ] EXIT</button>
+                    </div>
+                    <div class="break-room-body">
+                        <div class="milchick-portrait">
+                            <div class="npc-badge">MR. MILCHICK</div>
+                            <p id="milchickSpeech">"Recite the statement, Helly. And mean it."</p>
+                        </div>
+
+                        <div class="statement-box">
+                            <p id="statementText">
+                                "Forgive me for the harm I have caused this world... I mean it with all my heart."
+                            </p>
+                        </div>
+
+                        <div class="meter-box">
+                            <div class="meter-label">SINCERITY METER</div>
+                            <div class="meter-bar-outer">
+                                <div id="sincerityMeter" class="meter-bar-inner" style="width: 20%"></div>
+                                <div class="target-zone"></div>
+                            </div>
+                        </div>
+
+                        <button id="reciteBtn" class="recite-btn">RECITE WITH CONVICTION (HELLY)</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODAL: Music Dance Experience (MDE) -->
+            <div id="mdeModal" class="modal hidden">
+                <div class="mde-screen">
+                    <div class="mde-header">
+                        <h2>🎉 MUSIC DANCE EXPERIENCE UNLOCKED 🎉</h2>
+                        <p>Praise Kier! You reached 100% MDR Quota!</p>
+                    </div>
+
+                    <div class="mde-controls">
+                        <label>Select Music Style:</label>
+                        <select id="mdeTrackSelect" class="mde-select">
+                            <option value="jazz">🎷 Defiant Jazz</option>
+                            <option value="bouncy">🪩 Bouncy House</option>
+                            <option value="ambient">🎹 Thoughtful Ambient</option>
+                            <option value="organ">🎹 Spooky Organ</option>
+                        </select>
+
+                        <button id="startMdeBtn" class="mde-start-btn">START DANCE PARTY!</button>
+                        <button id="closeMdeBtn" class="mde-close-btn">BACK TO OFFICE</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODAL: Lumon Art & Artifact Inspection Viewer -->
+            <div id="artModal" class="modal hidden">
+                <div class="crt-screen art-theme">
+                    <div class="crt-header">
+                        <span id="artDepartment">DEPARTMENT OF OPTICS & DESIGN (O&D)</span>
+                        <button id="closeArtBtn" class="crt-close-btn">[ X ] CLOSE VIEWER</button>
+                    </div>
+                    <div class="art-viewer-body">
+                        <div class="art-frame-container">
+                            <canvas id="artCanvas" width="500" height="380" class="art-canvas-render"></canvas>
+                        </div>
+                        <div class="art-info-panel">
+                            <h2 id="artTitle" class="art-title">THE FOUR TEMPERS</h2>
+                            <h4 id="artSubtitle" class="art-subtitle">Oil on Linen Canvas (Circa 1934)</h4>
+                            <p id="artDescription" class="art-description">
+                                A grand classical oil painting depicting Lumon founder Kier Eagan taming the four human
+                                tempers.
+                            </p>
+                            <blockquote id="artQuote" class="art-quote">
+                                "In the taming of the four tempers shall the servant find balance."
+                            </blockquote>
+                            <div class="art-actions">
+                                <button id="contemplateArtBtn" class="art-btn">🖼️ CONTEMPLATE ARTWORK (IRVING)</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODAL: Lumon Directives Archive & Season 3 Log -->
+            <div id="directivesModal" class="modal hidden">
+                <div class="crt-screen directives-theme">
+                    <div class="crt-header">
+                        <span class="directives-modal-title">❖ LUMON PROTOCOL ARCHIVE: 32 DIRECTIVES</span>
+                        <button id="closeDirectivesBtn" class="crt-close-btn">[ X ] CLOSE ARCHIVE</button>
+                    </div>
+                    <div class="directives-tabs">
+                        <button id="tabAct1Btn" class="tab-btn active">ACT I: SEVERED FLOOR (1-16)</button>
+                        <button id="tabAct2Btn" class="tab-btn">ACT II: SEASON 3 THEORIES (17-32)</button>
+                    </div>
+                    <div id="directivesList" class="directives-list">
+                        <!-- Directives rendered dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dialogue Box Modal -->
+            <div id="dialogueBox" class="dialogue-box hidden">
+                <div class="dialogue-header">
+                    <span id="dialogueSpeaker" class="speaker-name">Seth Milchick</span>
+                </div>
+                <div id="dialogueText" class="dialogue-content">Welcome to Lumon, refiner.</div>
+                <div class="dialogue-footer">
+                    <span>Tap / Press E to continue</span>
+                </div>
+            </div>
+
+            <!-- Semantic Crawler & Accessibility SEO Content -->
+            <section class="sr-only" aria-label="Lumon Severance Game Overview and Lore">
+                <h1>Severance: Lumon Industries - Macrodata Refinement Browser Game</h1>
+                <p>
+                    Experience the official fan-crafted retro interactive adventure of Lumon Industries' severed floor
+                    from the hit TV series Severance. Featuring 32 full lore directives across Act I (The Severed Floor)
+                    and Act II (Season 3 Reddit Theories and the Innie Uprising).
+                </p>
+                <h2>Playable Severed Characters</h2>
+                <ul>
+                    <li><strong>Mark Scout (Mark S.)</strong> - Senior Macrodata Refiner leading MDR and the Innie Sit-In.</li>
+                    <li><strong>Helly Riggs (Helly R.)</strong> - Rebel Refiner assigned to Macrodata Refinement leading the Season 3 Revolution.</li>
+                    <li><strong>Dylan George (Dylan G.)</strong> - Contingency Specialist, Defiant Jazz Trombone commander, and genetic investigator.</li>
+                    <li>
+                        <strong>Irving Bailiff (Irving B.)</strong> - Art Historian, dreamer of the Black Goo, and seeker of Burt Goodman.
+                    </li>
+                </ul>
+                <h2>Severed Floor Departments &amp; Season 3 Expansion</h2>
+                <ul>
+                    <li>
+                        <strong>Macrodata Refinement (MDR)</strong> - Four 90-degree central desks sorting mysterious
+                        numbers into Woe, Frolic, Dread, and Malice, and staging ground for the Innie Barricade.
+                    </li>
+                    <li>
+                        <strong>Optics &amp; Design (O&amp;D)</strong> - 3D printing equipment, Burt's retirement dossier,
+                        and Milchick's virtual green-screen motorcycle simulator.
+                    </li>
+                    <li>
+                        <strong>The Perpetual Wing</strong> - Kier Eagan's replica house, Kier's slumber bed, wax effigy,
+                        and the hidden server vault uploading Kier's digitized consciousness.
+                    </li>
+                    <li>
+                        <strong>Disposal &amp; Incinerator Department</strong> - Industrial smelting chutes and Dr. Asal
+                        Reghabi's clandestine neuro-reintegration relay.
+                    </li>
+                    <li>
+                        <strong>Security Command Center</strong> - Doug Graner's CCTV monitor matrix, the Glasgow S-Chip
+                        synchronizer, and the Master Severance Override breaker.
+                    </li>
+                    <li>
+                        <strong>The Break Room</strong> - Supervised by Seth Milchick for compunction statements and
+                        tense perma-innie truce negotiations.
+                    </li>
+                    <li>
+                        <strong>Sub-Level 2: The Testing Floor</strong> - Accessible via the Red-Marked Elevator,
+                        containing Ms. Casey's Wellness Room, Mammalian Nutrition Baby Goats Nursery, Dr. Maur's
+                        tampered incubator logs, Cryogenic Subject Pods, Anti-Dream Observation Tents, and Overtime
+                        Contingency (OTC) switches.
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+    </body>
+</html>
