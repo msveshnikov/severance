@@ -72,7 +72,11 @@ func _build_world() -> void:
 	add_child(world)
 	env = WorldEnvironment.new()
 	var e := Environment.new()
-	e.background_mode = Environment.BG_CLEAR_COLOR
+	e.background_mode = Environment.BG_COLOR
+	e.background_color = UiKit.C_BG
+	if RenderingServer.get_current_rendering_method() == "gl_compatibility":
+		# the Compatibility renderer sRGB-encodes the background once more: hand it a linear colour
+		e.background_color = UiKit.C_BG.srgb_to_linear()
 	e.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
 	e.ambient_light_color = Color(0.78, 0.84, 0.86)
 	e.ambient_light_energy = 0.62
