@@ -4,7 +4,7 @@
 
 **Title (30):** Severance: Lumon Office
 
-**Short description (80):** Refine scary numbers, smuggle contraband and dance to Defiant Jazz on the severed floor.
+**Short description (80):** Refine scary numbers, sneak contraband and dance to Defiant Jazz at Lumon.
 
 **Full description:**
 

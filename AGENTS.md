@@ -11,9 +11,9 @@ Isometric 3D ("2.5D") adventure on the severed floor, Godot 4.7. Remake of the o
 | Project | `C:\My-progs\Godot\severance` |
 | GitHub (public) | https://github.com/msveshnikov/severance (remote `origin`, branch `master`) |
 | Old web game source (private, untouched) | https://github.com/msveshnikov/severance-game |
-| Live web build | https://severance.lol/ (root) — server folder `ubuntu@severance.lol:/var/www/severance/` (SSH key auth). The slot folders `1`–`9` in the same folder are other games: never delete them. The old Cordova web build was moved to `/var/www/severance-old-cordova/` on the server. |
+| Live web build | https://severance.lol/ (root) = https://maxims.top/severance/ (symlink `/var/www/maxims/severance -> /var/www/severance`, featured "New" card on maxims.top) — server folder `ubuntu@severance.lol:/var/www/severance/` (SSH key auth). The slot folders `1`–`9` in the same folder are other games: never delete them. The old Cordova web build was moved to `/var/www/severance-old-cordova/` on the server. |
 | Android APK | https://severance.lol/Severance.apk — signed with `~/.android/debug.keystore` |
-| Google Play | package `com.maxsoft.Severance` (the existing app; before the remake: Cordova/PWA build, code 10007). 2.0.0 = code 20000. |
+| Google Play | app "Severance: Lumon Office" (was "Severance Game"), package `com.maxsoft.Severance`, Play Console app id 4973964294141598588 (dev 5957945224586801272). Before the remake: Cordova/PWA build, code 10007. 2.0.0 (code 20000, AAB) + new en-US listing (texts, icon, feature graphic, 8 screenshots marked AI-made because the in-game paintings are AI art) + ru-RU listing «Разделение: Офис Lumon» sent for review 2026-11-19. |
 | Play upload key | `~/.android/severance-upload.jks` (alias `my-key-alias`, password in `severance-upload.txt`) = the old Cordova key with key password = store password. Godot reads it from `.godot/export_credentials.cfg` (preset.3). Never commit. Original: `~/.android/severance-cordova.keystore` + `.txt`. |
 | Godot exe | `C:\Users\msves\OneDrive\Рабочий стол\Godot_v4.7.2-stable_win64.exe` |
 | Blender exe | `C:\Program Files\Blender Foundation\Blender 5.2\blender.exe` |
@@ -66,6 +66,9 @@ Check the last line of `renders/autotest.log`: `AUTOTEST DONE fails=0 quota=100 
 Other flags: `--fresh` (ignore the save), `--lang en|ru`.
 
 ## Build and deploy
+
+The Web preset `html/head_include` carries the site's Google Analytics tag (G-131M8E1FZ2, the same as the old Cordova page) plus SEO/OG meta; keep it. `og.jpg` (1200x630) is uploaded next to index.html.
+
 
 ```
 "$G" --headless --path . --export-release "Windows Desktop" build/windows/Severance.exe
